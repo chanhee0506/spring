@@ -1,0 +1,43 @@
+package com.earth.chanheeyou;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/super-simple")
+public class SuperSimpleServlet extends HttpServlet {
+
+	@Override
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		
+		String name = request.getParameter("유찬희");
+		ServletContext context = getServletContext();
+		response.setContentType("text/html");
+		response.setCharacterEncoding("utf-8");
+
+		request.setAttribute(name, context);
+		
+		
+		PrintWriter out;
+		
+		out = response.getWriter();	
+		out.println("<html>");
+		out.println("<head>");
+		out.println("</head>");
+		out.println("<body>");
+	
+		out.println(name + "님 " + "안녕하세요.");
+		out.println("저는" + context  + "입니다.");
+					
+		out.println("</body>");
+		out.println("</html>");
+	
+	}
+}

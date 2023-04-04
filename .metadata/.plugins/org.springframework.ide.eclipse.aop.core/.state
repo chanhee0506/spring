@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="AnnotationWeb"/>
+<aop-project name="RequestWeb"/>
+<aop-project name="ClientServerWeb"/>
+<aop-project name="RemoteWeb"/>
+<aop-project name="ServletJSPWeb"/>
+<aop-project name="SeparateWeb"/>
+<aop-project name="FirstWeb"/>
+<aop-project name="ServletContainerWeb"/>
+<aop-project name="SimpleServletWeb"/>
+<aop-project name="RequestMessageWeb"/>
+<aop-project name="ScopeWeb"/>
+<aop-project name="movie"/>
+<aop-project name="DayOfTheWeekWeb"/>
+</aop-reference-model>

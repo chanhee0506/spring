@@ -1,0 +1,31 @@
+package com.earth.chanheeyou;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+
+
+@WebServlet("/super-simple")
+public class SuperSimpleServlet extends HttpServlet {
+
+	@Override
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		
+		String name = request.getParameter("유찬희");
+		ServletContext context = getServletContext();
+		response.setCharacterEncoding("utf-8");		
+		request.setAttribute(name, context);		
+		
+
+		request.getRequestDispatcher("super-simple?name=유찬희").forward(request, response);
+		
+		
+	}
+}
