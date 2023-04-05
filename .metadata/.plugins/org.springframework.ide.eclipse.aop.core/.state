@@ -11,6 +11,7 @@
 <aop-project name="SimpleServletWeb"/>
 <aop-project name="RequestMessageWeb"/>
 <aop-project name="ScopeWeb"/>
-<aop-project name="movie"/>
+<aop-project name="OTTT"/>
+<aop-project name="SignUpWeb"/>
 <aop-project name="DayOfTheWeekWeb"/>
 </aop-reference-model>
