@@ -15,10 +15,10 @@ public class RegisterContoller2 {
 	
 	//@RequestMapping(value = "/register/add2")
 	//@RequestMapping(value = "/register/add2", method = {RequestMethod.GET, RequestMethod.POST})
-	@GetMapping("/register/add2")		
-	public String register() {
-		return "registerForm";				// 신규회원 가입 화면
-	}
+//	@GetMapping("/register/add2")		
+//	public String register() {
+//		return "registerForm";				// 신규회원 가입 화면
+//	}
 	
 	//@RequestMapping(value = "/register/save2")
 	@PostMapping("/register/save2")		

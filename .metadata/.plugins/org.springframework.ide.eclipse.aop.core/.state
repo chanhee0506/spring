@@ -5,6 +5,7 @@
 <aop-project name="ClientServerWeb"/>
 <aop-project name="RemoteWeb"/>
 <aop-project name="ServletJSPWeb"/>
+<aop-project name="UIScreenWeb"/>
 <aop-project name="SeparateWeb"/>
 <aop-project name="FirstWeb"/>
 <aop-project name="ServletContainerWeb"/>
@@ -13,5 +14,7 @@
 <aop-project name="ScopeWeb"/>
 <aop-project name="OTTT"/>
 <aop-project name="SignUpWeb"/>
+<aop-project name="RedirectForwardWeb"/>
 <aop-project name="DayOfTheWeekWeb"/>
+<aop-project name="CookieWeb"/>
 </aop-reference-model>

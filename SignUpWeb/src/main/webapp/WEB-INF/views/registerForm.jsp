@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <style type="text/css">
     	* { box-sizing: border-box; }
+    	
     	.title {
+    	
     		font-size: 50px;
     		margin: 40px 0 30px 0;
     		color: #33ff33;
@@ -73,8 +75,7 @@
     <title>회원가입</title>
 </head>
 <body>
-    <form action='<c:url value="/register/save2" />' method="post"
-    onsubmit="return formCheck(this)">
+    <form action='<c:url value="/register/save2" />' method="post" onsubmit="return formCheck(this)">
     	<div class="title">Register</div>
     	<div id="msg" class="msg"></div>
     	
