@@ -45,7 +45,7 @@
         <div class="h-icon">
           <ul>
             <li>
-              <a href="#">
+              <a class="p1" href="#">
                  <img src="./resources/img/search02.png" alt="검색"> 
               </a>
             </li>

@@ -4,6 +4,7 @@
 <aop-project name="RequestWeb"/>
 <aop-project name="ClientServerWeb"/>
 <aop-project name="RemoteWeb"/>
+<aop-project name="SigninWeb"/>
 <aop-project name="ServletJSPWeb"/>
 <aop-project name="UIScreenWeb"/>
 <aop-project name="SeparateWeb"/>

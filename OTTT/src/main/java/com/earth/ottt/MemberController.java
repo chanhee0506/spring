@@ -13,14 +13,13 @@ import lombok.extern.log4j.Log4j;
 
 @Log4j
 @Controller
-@RequestMapping(value = "/member")
 public class MemberController {
 	
 	@Autowired
 	private MemberService memberservice;
 	
 	//회원가입 페이지 이동
-	@RequestMapping(value = "join", method = RequestMethod.GET)
+	@RequestMapping(value = "/login/join", method = RequestMethod.GET)
 	public void loginGET() {
 		
 		
@@ -28,13 +27,13 @@ public class MemberController {
 	}
 	
 	//회원가입
-	@RequestMapping(value="/join", method=RequestMethod.POST)
+	@RequestMapping(value="/login/join", method=RequestMethod.POST)
 	public String joinPOST(MemberVO member) throws Exception{
 
 		// 회원가입 서비스 실행
 		memberservice.memberJoin(member);
 		
-		return "redirect:/main";
+		return "redirect:/otttmain";
 		
 	}
 	

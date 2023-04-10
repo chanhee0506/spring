@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="com.earth.mapper.MemberMapper">
 	<insert id="memberJoin">
-  		insert into book_member values(#{memberId}, #{memberPw}, #{memberName}, #{memberMail}, #{memberAddr1}, #{memberAddr2}, #{memberAddr3}, 0, now(), 100000, 5000 )
+  		insert into ottt_member values(#{memberId}, #{memberPw}, #{memberName})
 
   	</insert>
   	
