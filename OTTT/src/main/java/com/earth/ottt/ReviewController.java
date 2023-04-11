@@ -11,6 +11,6 @@ public class ReviewController {
 
 	@RequestMapping(value = "/review")
 	public String review() {
-		return "review";				//로그인 화면		
+		return "review";					
 	}
 }

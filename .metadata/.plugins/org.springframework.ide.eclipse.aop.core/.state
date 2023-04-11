@@ -7,6 +7,7 @@
 <aop-project name="SigninWeb"/>
 <aop-project name="ServletJSPWeb"/>
 <aop-project name="UIScreenWeb"/>
+<aop-project name="SessionWeb"/>
 <aop-project name="SeparateWeb"/>
 <aop-project name="FirstWeb"/>
 <aop-project name="ServletContainerWeb"/>
@@ -14,6 +15,7 @@
 <aop-project name="RequestMessageWeb"/>
 <aop-project name="ScopeWeb"/>
 <aop-project name="OTTT"/>
+<aop-project name="LoginWeb"/>
 <aop-project name="SignUpWeb"/>
 <aop-project name="RedirectForwardWeb"/>
 <aop-project name="DayOfTheWeekWeb"/>

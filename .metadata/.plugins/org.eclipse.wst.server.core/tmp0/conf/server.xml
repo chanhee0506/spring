@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\workspace-spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\workspace-spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\OTTT" path="/ottt" reloadable="true" source="org.eclipse.jst.jee.server:OTTT"/></Host>
+      <Context docBase="C:\workspace-spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\OTTT" path="" reloadable="true" source="org.eclipse.jst.jee.server:OTTT"/><Context docBase="C:\workspace-spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SigninWeb" path="/mlb" reloadable="true" source="org.eclipse.jst.jee.server:SigninWeb"/><Context docBase="C:\workspace-spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SessionWeb" path="/street" reloadable="true" source="org.eclipse.jst.jee.server:SessionWeb"/><Context docBase="C:\workspace-spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\LoginWeb" path="/downtown" reloadable="true" source="org.eclipse.jst.jee.server:LoginWeb"/></Host>
     </Engine>
   </Service>
 </Server>
