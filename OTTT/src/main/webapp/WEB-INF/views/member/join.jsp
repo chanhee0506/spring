@@ -17,7 +17,7 @@
     <div class="wrap">
       <header>
         <div class="logo">
-          <a href="#">
+          <a href="/main">
             <img src="../resources/img/OTTT.png" alt="로고">
           </a>
         </div>
@@ -44,19 +44,19 @@
           <ul>
             <li>
               <a href="#">
-                <img src="./images/icon/search02.png" alt="검색">
+                <!-- <img src="./images/icon/search02.png" alt="검색"> -->
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="./images/icon/user01.png" alt="내 정보">
+                <!-- <img src="./images/icon/user01.png" alt="내 정보"> -->
               </a>
             </li>
           </ul>
         </div> 
          
         
-        
+
         <div class="wrapper">
           <h1 style="font-size: 21px; display: inline-block;">회원가입</h1>
           <form method="post" id="membership">
@@ -66,14 +66,17 @@
               	<span class="id_input_re_1">사용 가능한 아이디입니다.</span>
 				<span class="id_input_re_2">아이디가 이미 존재합니다.</span>
             </div>
+            
             <div class="password">
-              <input type="password" id="password" title="PW" maxlength="20" style="border: none;" placeholder="비밀번호 입력" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\da-zA-Z])(.{8,20})$" name="memberPw">
+              <input type="password" id="password" title="PW" maxlength="20" style="border: none;" placeholder="비밀번호 입력" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$" name="memberPw">
               <span class="errorMsg" id="passwordErrorMsg"></span>
             </div>
             <div class="passwordCheck">
               <input type="password" id="passwordCheck" title="PWC" maxlength="20" style="border: none;" placeholder="비밀번호 재확인" required>
               <span class="errorMsg" id="passwordCheckErrorMsg"></span>
             </div>
+            
+
           
 
           
@@ -106,8 +109,10 @@
         	}); // ajax 종료
 
         });// function 종료
-        $(document).ready(function() {
-          // 아이디 유효성 검사
+       $(document).ready(function() { 
+
+          	
+        	// 아이디 유효성 검사
           $('#id').on('blur', function() {
             var idValue = $(this).val();
             var idRegex = /^[a-zA-Z0-9]+$/;
@@ -123,9 +128,9 @@
           // 비밀번호 유효성 검사
           $('#password').on('blur', function() {
             var passwordValue = $(this).val();
-            var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\da-zA-Z])(.{8,20})$/;
+            var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
             if (!passwordRegex.test(passwordValue)) {
-              $('#passwordErrorMsg').text('비밀번호는 영문 대/소문자, 숫자, 특수문자를 포함하여 8~20자리로 입력해야 합니다.');
+              $('#passwordErrorMsg').text('비밀번호는 영문, 숫자, 특수문자를 포함하여 최소8자리 이상으로 입력해야 합니다.');
             } else {
               $('#passwordErrorMsg').text('');
             }
@@ -141,12 +146,21 @@
               $('#passwordCheckErrorMsg').text('');
             }
           });
-        });
-        $(document).ready(function(){
-        	//회원가입 버튼(회원가입 기능 작동)
-        	$(".join_button").click(function(){
-        		$("#membership").attr("action", "/ottt/member/join");
-        		$("#membership").submit();
+         }); 
+       
+          $(document).ready(function(){
+        	  $(".join_button").click(function(){
+            	//회원가입 버튼(회원가입 기능 작동)
+        if(idValue&&passwordValue&&passwordCheckValue&&passwordRegex){
+
+        	
+        	$("#membership").attr("action", "/member/join");
+    		$("#membership").submit();
+        }
+        return false;
+        
+
+
         	});
         });
         </script>
@@ -196,16 +210,16 @@
                     }
                   });
                   </script>
-                 <button id="send-verification-code">인증번호 발송</button>
+                 <button id="send-verification-code">인증번호발송</button>
                 </div>
                 <div class="Certification">
                 <input type="text" id="Certification" title="EM" maxlength="20" style="border: none;" placeholder="인증번호" >
                 <button disabled id="completion" onclick="checkCompletion()">인증확인</button>
                 </div>
                 <div class="back">
-                
-                    <input type="button" value="이전" >
-                  
+                	<a href="/member/login">
+                    	<input type="button" value="이전" >
+                  	</a>
                 </div>
                 <div class="complate">
                   <input type=submit class="join_button" value="완료">

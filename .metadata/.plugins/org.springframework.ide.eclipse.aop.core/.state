@@ -11,10 +11,12 @@
 <aop-project name="SeparateWeb"/>
 <aop-project name="FirstWeb"/>
 <aop-project name="ServletContainerWeb"/>
+<aop-project name="ExceptionWeb"/>
 <aop-project name="SimpleServletWeb"/>
 <aop-project name="RequestMessageWeb"/>
 <aop-project name="ScopeWeb"/>
 <aop-project name="OTTT"/>
+<aop-project name="ExceptionWeb02"/>
 <aop-project name="LoginWeb"/>
 <aop-project name="SignUpWeb"/>
 <aop-project name="RedirectForwardWeb"/>

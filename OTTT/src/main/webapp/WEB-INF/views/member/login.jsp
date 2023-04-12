@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>    
 
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="utf-8">
@@ -21,7 +22,7 @@
     <div class="wrap">
       <header>
         <div class="logo">
-          <a href="#">
+          <a href="/main">
             <img src="../resources/img/OTTT.png" alt="로고">
           </a>
         </div>
@@ -45,19 +46,23 @@
           </ul>
         </nav>
         <div class="h-icon">
-<!--           <ul>
+          <ul>
             <li>
-              <a href="#">
-                <img src="./images/icon/search02.png" alt="검색">
+              <a class="p3" href="#">
+                <!-- <img src="./images/icon/search02.png" alt="검색"> -->
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src="./images/icon/user01.png" alt="내 정보">
+              <a class="p4" href="#">
+               <!--  <img src="./images/icon/user01.png" alt="내 정보"> --> 
               </a>
             </li>
-          </ul> -->
+          </ul> 
         </div>
+         
+            <c:if test = "${result == 0 }">
+                <div class = "login_warn">사용자 ID 또는 비밀번호를 잘못 입력하셨습니다.</div>
+            </c:if>
          
         <div class = "Login">   
           <img src = "../resources/img/OTTTLOGIN.png" width="300" height="80">
@@ -66,11 +71,15 @@
       
 
           <form method="post" id="login_form">
+          <div class="hihi">
             <input type="text" style="border:0 solid black" name="memberId" placeholder="아이디" class="id_input">
             <input type="password" style="border:0 solid black" name="memberPw" style="border:0 solid black" placeholder="비밀번호" class="pw_input">
             <input type="button" class="login_button" value="로그인">
+
+            </div>
+
             <a>
-            <input type="button" value="회원가입" onClick="location.href='#'" class="join" >
+            <input type="button" value="회원가입" onClick="location.href='/member/join'" class="join" >
             <input type="button" value="아이디 찾기" onClick="location.href='#'" class="join">
             <input type="button" value="비밀번호 찾기" onClick="location.href='#'" class="join">
             </a>

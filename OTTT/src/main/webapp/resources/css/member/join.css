@@ -96,7 +96,16 @@ header{
 
 
 .h-icon > ul > li:first-child > a{
-    background:url("../images/icon/search02.png");
+	background-image: url("../../img/search02.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
+}
+
+.h-icon > ul > li:first-child > a:hover{
+    background: url("../../img/search-h.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;
@@ -105,25 +114,18 @@ header{
 }
 
 .h-icon > ul > li:last-child > a{
-    background:url("../images/icon/user01.png");
-    background-repeat: no-repeat;
+    background:url("../../img/user01.png");
+    background-repeat:no-repeat;
     background-position: center;
     background-size: 32px;
     width: 32px;
     height: 32px;
 }
 
-.h-icon > ul > li:first-child > a:hover{
-    background: url("../images/icon/search-h.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 32px;
-    width: 32px;
-    height: 32px;
-}
+
 
 .h-icon > ul > li:last-child > a:hover{
-    background: url("../images/icon/user-h.png");
+    background: url("../../img/user-h.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;
@@ -202,6 +204,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+   
     
 }
 .passwordCheck input {
@@ -268,6 +271,9 @@ header{
     margin-left: 10px;
     height: 30px;
     background-color: #3f3b3b;
+    color: black;
+    border-radius: 8px;
+    
 }
 
 select {
@@ -282,11 +288,12 @@ select {
     width: 200px;
     height: 30px;
     background-color: #3f3b3b;
-
+	
 }
 
 .Certification {
     margin-top: 30px;
+    
 }
 
 
@@ -296,6 +303,8 @@ select {
     margin-left: 10px;
     height: 30px;
     background-color: #3f3b3b;
+    color: black;
+    border-radius: 8px;
 }
 
 .back {
@@ -332,5 +341,7 @@ select {
     border-radius: 12px;
     font-size: 25px;
   }
+  
+
 
 

@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<c:set var="path" value="${pageContext.request.contextPath}"/> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTTTMain</title>
+    <title>OTTTmain</title>
 
     <link rel="stylesheet" href="./resources/css/main/main.css" > 
     <script src="./resources/js/main/jquery-3.6.1.min.js"></script>
@@ -27,7 +27,7 @@
     <div class="wrap"> 
         <div style="background-color: black; text-align: center; height: 1080px;">
             <img src="./resources/img/메인이미지.png" style="width: 1200px; background-position: center; margin-top: 150px;"/>
-            <a href="#" class="user-img">
+            <a href="/member/login" class="user-img">
                 <!-- <img src="./image/icon/user01.png" class="main-icon"/> -->
             </a>
             <div>
