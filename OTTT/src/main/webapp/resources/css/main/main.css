@@ -17,6 +17,8 @@ a{
     color: #ffffff;
 }
 
+
+
 ul,li,ol{
     list-style: none;
 }
@@ -58,7 +60,9 @@ li a:hover{
     border-bottom-style: solid;
     border-bottom-width: 5px;
     border-bottom-color: #33FF33;  
-    
+ 	color: white;   
+ 	padding-left: 7px;
+ 	font-size: 20px;
 }
 
 .main-search img{
@@ -527,7 +531,7 @@ input[type="checkbox"]:checked{
     height: 50px;
     position: relative;
     top: -30px;
-    left: 500px;
+    left: 520px;
 }
 
 .search-img:hover{

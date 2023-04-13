@@ -24,16 +24,16 @@
         <nav class="gnb">
           <ul>
             <li>
-              <a href="#">영화&nbsp;&nbsp;</a>
+              <a href="#">영화</a>
             </li>
             <li>
-              <a href="#">드라마&nbsp;</a>
+              <a href="#">드라마</a>
             </li>
             <li>
               <a href="#">예능</a>
             </li>
             <li>
-              <a href="#">애니&nbsp;</a>
+              <a href="#">애니</a>
             </li>
             <li>
               <a href="#">게시판</a>
@@ -58,22 +58,22 @@
         
 
         <div class="wrapper">
-          <h1 style="font-size: 21px; display: inline-block;">회원가입</h1>
+          <h1 style="font-size: 21px; display: inline-block; color: #33ff33; ">회원가입</h1>
           <form method="post" id="membership">
             <div class="Id">
-              <input type="text" id="id" title="ID" maxlength="15" style="border: none;" placeholder="아이디 입력" required pattern="^[a-zA-Z0-9]+$" name="memberId" class="id_input">
-              <span class="errorMsg" id="idErrorMsg"></span>
+              <input type="text" id="id" title="ID" maxlength="15" style="border: 2px solid gray; border-radius: 5px;" placeholder="아이디 입력" required pattern="^[a-zA-Z0-9]+$" name="memberId" class="id_input" >
+              <div class="errorMsg" id="idErrorMsg"></div>
               	<span class="id_input_re_1">사용 가능한 아이디입니다.</span>
 				<span class="id_input_re_2">아이디가 이미 존재합니다.</span>
             </div>
             
             <div class="password">
-              <input type="password" id="password" title="PW" maxlength="20" style="border: none;" placeholder="비밀번호 입력" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$" name="memberPw">
-              <span class="errorMsg" id="passwordErrorMsg"></span>
+              <input type="password" id="password" title="PW" maxlength="20" style="border: 2px solid gray; border-radius: 5px;"  placeholder="비밀번호 입력" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$" name="memberPw">
+              <div class="errorMsg" id="passwordErrorMsg"></div>
             </div>
             <div class="passwordCheck">
-              <input type="password" id="passwordCheck" title="PWC" maxlength="20" style="border: none;" placeholder="비밀번호 재확인" required>
-              <span class="errorMsg" id="passwordCheckErrorMsg"></span>
+              <input type="password" id="passwordCheck" title="PWC" maxlength="20" style="border: 2px solid gray; border-radius: 5px;" placeholder="비밀번호 재확인" required>
+              <div class="errorMsg" id="passwordCheckErrorMsg"></div>
             </div>
             
 
@@ -130,7 +130,7 @@
             var passwordValue = $(this).val();
             var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
             if (!passwordRegex.test(passwordValue)) {
-              $('#passwordErrorMsg').text('비밀번호는 영문, 숫자, 특수문자를 포함하여 최소8자리 이상으로 입력해야 합니다.');
+              $('#passwordErrorMsg').text('영문, 숫자, 특수문자를 포함하여 최소8자리 이상으로 입력해야 합니다.');
             } else {
               $('#passwordErrorMsg').text('');
             }
@@ -146,12 +146,25 @@
               $('#passwordCheckErrorMsg').text('');
             }
           });
+          //이름 유효성검사
+          $("#name").on("blur",function(){
+              var nameRegex = /^[가-힣]{2,4}$/;
+              var nameValue = $(this).val();
+              
+              if(!nameRegex.test(nameValue)){
+                 $('#nameErrorMsg').text('한글만 입력 가능합니다.');  
+              }else{
+                  $('#nameErrorMsg').text('');
+              }
+              
+          });
          }); 
+
        
           $(document).ready(function(){
         	  $(".join_button").click(function(){
             	//회원가입 버튼(회원가입 기능 작동)
-        if(idValue&&passwordValue&&passwordCheckValue&&passwordRegex){
+        if(idValue&&passwordValue&&passwordCheckValue&&passwordRegex&&nameValue&&nameRegex){
 
         	
         	$("#membership").attr("action", "/member/join");
@@ -170,14 +183,15 @@
 
 
               <div class="name">
-                <input type="text" id="name" title="NM" maxlength="10" style="border: none;" placeholder="이름" name="memberName" >
-                <span><select name="성별">
+                <input type="text" id="name" title="NM" maxlength="10" style="border: 2px solid gray; border-radius: 5px;" placeholder="이름" name="memberName" required pattern="^[가-힣]{2,4}$" >
+                <div class="errorMsg" id="nameErrorMsg" ></div>
+                <div class="gender"><select name="성별">
                   <option value="">선택</option>
                   <option value="남자">남자</option>
                   <option value="여자">여자</option>
                   <option value="비공개">비공개</option>
                 </select>
-                </span>
+                </div>
                 <script>
                   const form = document.querySelector('form');
                   const genderSelect = form.querySelector('select[name="성별"]');
@@ -191,10 +205,10 @@
                 </script>
           
                 <div class="nname">
-                  <input type="text" id="nname" title="NNM" maxlength="10" style="border: none;" placeholder="닉네임" >
+                  <input type="text" id="nname" title="NNM" maxlength="10" style="border: 2px solid gray; border-radius: 5px;" placeholder="닉네임" required pattern="^(?=.*[a-z0-9가-힣])[a-z0-9가-힣]{2,16}$">
                 </div>
                 <div class="email">
-                 <input type="email" id="email" title="EM" maxlength="20" style="border: none;" placeholder="이메일" >
+                 <input type="email" id="email" title="EM" maxlength="20" style="border: 2px solid gray; border-radius: 5px;" placeholder="이메일" >
                  <span>
                   <select id="domain" name="직접입력">
                     <option value="select">직접입력</option>
@@ -213,7 +227,7 @@
                  <button id="send-verification-code">인증번호발송</button>
                 </div>
                 <div class="Certification">
-                <input type="text" id="Certification" title="EM" maxlength="20" style="border: none;" placeholder="인증번호" >
+                <input type="text" id="Certification" title="EM" maxlength="20" style="border: 2px solid gray; border-radius: 5px;" placeholder="인증번호" >
                 <button disabled id="completion" onclick="checkCompletion()">인증확인</button>
                 </div>
                 <div class="back">

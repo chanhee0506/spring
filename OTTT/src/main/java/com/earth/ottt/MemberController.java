@@ -38,7 +38,7 @@ public class MemberController {
 		// 회원가입 서비스 실행
 		memberservice.memberJoin(member);
 		
-		return "redirect:/main";
+		return "redirect:/member/login";
 		
 	}
 	
@@ -79,6 +79,8 @@ public class MemberController {
     	 HttpSession session = request.getSession();
     	 MemberVO lvo = memberservice.memberLogin(member);
     	 
+ 
+    	 
          if(lvo == null) {                                // 일치하지 않는 아이디, 비밀번호 입력 경우
              
              int result = 0;
@@ -88,7 +90,7 @@ public class MemberController {
          }
          
          session.setAttribute("member", lvo);             // 일치하는 아이디, 비밀번호 경우 (로그인 성공)
-         
+        
          return "redirect:/main";
         
         

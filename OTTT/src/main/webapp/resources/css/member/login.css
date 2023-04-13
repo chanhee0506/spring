@@ -45,6 +45,7 @@ header{
     width: 230px;
     height : 95px;   
     margin-top: 30px;
+    margin-right: 32px;
 }
 
 .logo > a > img{
@@ -87,6 +88,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     margin-top: 12px;
+    padding-left: 2rem;
 }
 
 
@@ -146,8 +148,18 @@ header{
 	
 }
 
+.id_input {
+	border: 2px solid gray;
+}
 
+.pw_input {
+	border: 2px solid gray;
+}
 
+.login_button {
+	border: 2px solid gray;
+	
+}
 
 .hihi > input{
     width: 100%;
@@ -157,18 +169,20 @@ header{
     margin-bottom: 6px;
     border-radius: 6px;
     background-color:#3F3B3B;
-    color: #33ff33;
+    color: white;
     position: relative;
     top: 50px;
 }
 
 
-.hihi > input[type="button"]{
+.hihi > input[type="submit"]{
     color: #000;
     font-size: 16px;
     height: 40px;
     background-color:#33ff33;
     margin-top: 1px;
+    border-color: #33ff33;
+   
 }
 
 
@@ -203,6 +217,6 @@ header{
     top: 200px;
     left: 440px;
     text-align: center;
-    color : white;
+    color : red;
 }
 

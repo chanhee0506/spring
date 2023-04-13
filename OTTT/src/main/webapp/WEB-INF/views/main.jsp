@@ -35,7 +35,7 @@
             </div>
             <br/>
             <span class="main-search">
-                <a href="#"><input type="text"/></a>
+                <a href="#"><input type="text" class="input_text"/></a>
                 <a href="#" class="search-img">
                     <!-- <img src="/image/icon/search02.png"/> -->
                 </a>
@@ -84,7 +84,7 @@
                 </a>
                 </li>
                 <li>
-                <a class="p4" href="#">
+                <a class="p4" href="/member/login">
                     <!-- <img src="./image/icon/user01.png" alt="내 정보"> -->
                 </a>
                 </li>

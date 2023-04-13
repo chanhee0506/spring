@@ -29,16 +29,16 @@
         <nav class="gnb">
           <ul>
             <li>
-              <a href="#">영화&nbsp;&nbsp;</a>
+              <a href="#">영화</a>
             </li>
             <li>
-              <a href="#">드라마&nbsp;</a>
+              <a href="#">드라마</a>
             </li>
             <li>
               <a href="#">예능</a>
             </li>
             <li>
-              <a href="#">애니&nbsp;</a>
+              <a href="#">애니</a>
             </li>
             <li>
               <a href="#">게시판</a>
@@ -72,9 +72,9 @@
 
           <form method="post" id="login_form">
           <div class="hihi">
-            <input type="text" style="border:0 solid black" name="memberId" placeholder="아이디" class="id_input">
-            <input type="password" style="border:0 solid black" name="memberPw" style="border:0 solid black" placeholder="비밀번호" class="pw_input">
-            <input type="button" class="login_button" value="로그인">
+            <input type="text"  name="memberId" placeholder="아이디" class="id_input">
+            <input type="password"  name="memberPw"  placeholder="비밀번호" class="pw_input">
+            <input type="submit" class="login_button" value="로그인" >
 
             </div>
 
