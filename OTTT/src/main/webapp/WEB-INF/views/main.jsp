@@ -35,8 +35,8 @@
             </div>
             <br/>
             <span class="main-search">
-                <a href="#"><input type="text" class="input_text"/></a>
-                <a href="#" class="search-img">
+                <a href="/search"><input type="text" class="input_text"/></a>
+                <a href="/search" class="search-img">
                     <!-- <img src="/image/icon/search02.png"/> -->
                 </a>
             </span>
@@ -79,7 +79,7 @@
             <div class="h-icon">
             <ul>
                 <li>
-                <a class="p3" href="#">
+                <a class="p3" href="/search">
                     <!-- <img src="./image/icon/search02.png" alt="검색"> -->
                 </a>
                 </li>

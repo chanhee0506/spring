@@ -48,12 +48,12 @@
         <div class="h-icon">
           <ul>
             <li>
-              <a class="p3" href="#">
+              <a class="p3" href="/search">
                 <!-- <img src="./images/icon/search02.png" alt="검색"> -->
               </a>
             </li>
             <li>
-              <a class="p4" href="#">
+              <a class="p4" href="/member/login">
                <!--  <img src="./images/icon/user01.png" alt="내 정보"> --> 
               </a>
             </li>

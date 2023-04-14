@@ -31,6 +31,8 @@ public class MemberController {
 		
 	}
 	
+	
+	
 	//회원가입
 	@RequestMapping(value="/join", method=RequestMethod.POST)
 	public String joinPOST(MemberVO member) throws Exception{
@@ -38,7 +40,12 @@ public class MemberController {
 		// 회원가입 서비스 실행
 		memberservice.memberJoin(member);
 		
-		return "redirect:/member/login";
+		return "redirect:/member/joincomplete";
+		
+	}
+	//회원가입 완료 페이지 이동
+	@RequestMapping(value = "/joincomplete", method = RequestMethod.GET)
+	public void joincompleteGET() {
 		
 	}
 	
@@ -86,6 +93,33 @@ public class MemberController {
              int result = 0;
              rttr.addFlashAttribute("result", result);
              return "redirect:/member/login";
+             
+         }
+         
+         session.setAttribute("member", lvo);             // 일치하는 아이디, 비밀번호 경우 (로그인 성공)
+        
+         return "redirect:/main";
+        
+        
+    }
+    
+    /* 회원가입완료페이지로그인 */
+    @RequestMapping(value="/joincomplete", method=RequestMethod.POST)
+    public String login2POST(HttpServletRequest request, MemberVO member, RedirectAttributes rttr) throws Exception{
+        
+//        System.out.println("login 메서드 진입");
+//        System.out.println("전달된 데이터 : " + member);
+    	
+    	 HttpSession session = request.getSession();
+    	 MemberVO lvo = memberservice.memberLogin(member);
+    	 
+ 
+    	 
+         if(lvo == null) {                                // 일치하지 않는 아이디, 비밀번호 입력 경우
+             
+             int result = 0;
+             rttr.addFlashAttribute("result", result);
+             return "redirect:/member/joincomplete";
              
          }
          

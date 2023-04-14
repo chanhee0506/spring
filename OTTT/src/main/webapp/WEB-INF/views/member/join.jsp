@@ -43,12 +43,12 @@
          <div class="h-icon">
           <ul>
             <li>
-              <a href="#">
+              <a href="/search">
                 <!-- <img src="./images/icon/search02.png" alt="검색"> -->
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/member/login">
                 <!-- <img src="./images/icon/user01.png" alt="내 정보"> -->
               </a>
             </li>
@@ -63,8 +63,10 @@
             <div class="Id">
               <input type="text" id="id" title="ID" maxlength="15" style="border: 2px solid gray; border-radius: 5px;" placeholder="아이디 입력" required pattern="^[a-zA-Z0-9]+$" name="memberId" class="id_input" >
               <div class="errorMsg" id="idErrorMsg"></div>
+              <div class="idChk">
               	<span class="id_input_re_1">사용 가능한 아이디입니다.</span>
 				<span class="id_input_re_2">아이디가 이미 존재합니다.</span>
+			  </div>
             </div>
             
             <div class="password">
@@ -148,7 +150,7 @@
           });
           //이름 유효성검사
           $("#name").on("blur",function(){
-              var nameRegex = /^[가-힣]{2,4}$/;
+              var nameRegex = /^[가-힣]{2,6}$/;
               var nameValue = $(this).val();
               
               if(!nameRegex.test(nameValue)){
@@ -183,7 +185,7 @@
 
 
               <div class="name">
-                <input type="text" id="name" title="NM" maxlength="10" style="border: 2px solid gray; border-radius: 5px;" placeholder="이름" name="memberName" required pattern="^[가-힣]{2,4}$" >
+                <input type="text" id="name"  maxlength="10" style="border: 2px solid gray; border-radius: 5px;" placeholder="이름" name="memberName" required pattern="^[가-힣]{2,6}$" >
                 <div class="errorMsg" id="nameErrorMsg" ></div>
                 <div class="gender"><select name="성별">
                   <option value="">선택</option>

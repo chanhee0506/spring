@@ -238,6 +238,7 @@ header{
     background-color: #3f3b3b;
     width: 100px;
     color: silver;
+    margin-left: 10px;
   }
 
 .nname {
@@ -362,9 +363,9 @@ select {
   .gender{
   
   position: absolute;
-  right: 80px;
+  right: 40px;
   top: 209px;
-
+  
   
   }
   
@@ -380,6 +381,13 @@ select {
 	color: silver;
 	border: 2px solid gray; 
     border-radius: 5px;
+}
+
+.idChk{
+	margin-top: 5px;
+	position: absolute;
+	left: 265px;
+	font-size: 13px;
 }
 
 

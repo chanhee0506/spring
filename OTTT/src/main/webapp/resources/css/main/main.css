@@ -63,7 +63,11 @@ li a:hover{
  	color: white;   
  	padding-left: 7px;
  	font-size: 20px;
+ 	
+
 }
+
+.main-search input:focus {outline:none;}
 
 .main-search img{
     width: 50px;
@@ -359,6 +363,7 @@ header{
     height: 70px;
     position: relative;
     left: 200px;
+    color: white;
 }
 
 .search img{
@@ -403,6 +408,7 @@ header{
     border-bottom-style: solid;
     border-bottom-width: 1vb;
     border-bottom-color: #33FF33;  
+  
 }
 
 .search-main{
@@ -484,7 +490,7 @@ input[type="checkbox"]:checked{
     height: 58px;
     position: relative;
     top: 35px;
-    left: 190px;
+    left: 210px;
     transform: translateY(-50%);
 }
 
@@ -492,7 +498,7 @@ input[type="checkbox"]:checked{
     width: 50px;
 }
 
-
+.search input:focus {outline:none;}
 
 .search span a{
     background:url("../../img/search02.png");
