@@ -207,7 +207,7 @@
                 </script>
           
                 <div class="nname">
-                  <input type="text" id="nname" title="NNM" maxlength="10" style="border: 2px solid gray; border-radius: 5px;" placeholder="닉네임" required pattern="^(?=.*[a-z0-9가-힣])[a-z0-9가-힣]{2,16}$">
+                  <input type="text" id="nname" title="NNM" maxlength="10" style="border: 2px solid gray; border-radius: 5px;" placeholder="닉네임" required pattern="^(?=.*[a-z0-9가-힣])[a-z0-9가-힣]{2,8}$">
                 </div>
                 <div class="email">
                  <input type="email" id="email" title="EM" maxlength="20" style="border: 2px solid gray; border-radius: 5px;" placeholder="이메일" >

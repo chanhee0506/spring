@@ -29,6 +29,8 @@ C:\workspace-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\208881
 \SessionWeb\src\main\java
 C:\workspace-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2534247975.index
 \CookieWeb\src\main\java
+C:\workspace-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3388883228.index
+\SpringDIWeb\src\main\java
 C:\workspace-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2276334220.index
 \SeparateWeb\src\main\java
 C:\workspace-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\252733603.index

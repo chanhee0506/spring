@@ -74,7 +74,8 @@
           <div class="hihi">
             <input type="text"  name="memberId" placeholder="아이디" class="id_input">
             <input type="password"  name="memberPw"  placeholder="비밀번호" class="pw_input">
-            <input type="submit" class="login_button" value="로그인" >
+            <input type="submit" class="login_button
+            " value="로그인" >
 
             </div>
 

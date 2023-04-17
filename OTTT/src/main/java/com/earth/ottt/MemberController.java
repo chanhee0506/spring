@@ -31,6 +31,10 @@ public class MemberController {
 		
 	}
 	
+	public void agreeGET( ) {
+		
+	}
+	
 	
 	
 	//회원가입
