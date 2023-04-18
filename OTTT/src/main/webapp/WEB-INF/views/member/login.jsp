@@ -80,7 +80,7 @@
             </div>
 
             <a>
-            <input type="button" value="회원가입" onClick="location.href='/member/join'" class="join" >
+            <input type="button" value="회원가입" onClick="location.href='/member/agree'" class="join" >
             <input type="button" value="아이디 찾기" onClick="location.href='#'" class="join">
             <input type="button" value="비밀번호 찾기" onClick="location.href='#'" class="join">
             </a>

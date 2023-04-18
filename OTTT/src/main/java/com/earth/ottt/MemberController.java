@@ -31,6 +31,8 @@ public class MemberController {
 		
 	}
 	
+	//약관동의 페이지 이동
+	@RequestMapping(value = "/agree", method = RequestMethod.GET)
 	public void agreeGET( ) {
 		
 	}

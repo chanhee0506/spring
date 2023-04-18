@@ -96,7 +96,16 @@ header{
 
 
 .h-icon > ul > li:first-child > a{
-    background:url("../images/icon/search02.png");
+	background-image: url("../../img/search02.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
+}
+
+.h-icon > ul > li:first-child > a:hover{
+    background: url("../../img/search-h.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;
@@ -105,25 +114,18 @@ header{
 }
 
 .h-icon > ul > li:last-child > a{
-    background:url("../images/icon/user01.png");
-    background-repeat: no-repeat;
+    background:url("../../img/user01.png");
+    background-repeat:no-repeat;
     background-position: center;
     background-size: 32px;
     width: 32px;
     height: 32px;
 }
 
-.h-icon > ul > li:first-child > a:hover{
-    background: url("../images/icon/search-h.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 32px;
-    width: 32px;
-    height: 32px;
-}
+
 
 .h-icon > ul > li:last-child > a:hover{
-    background: url("../images/icon/user-h.png");
+    background: url("../../img/user-h.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;

@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="AnnotationWeb"/>
-<aop-project name="RequestWeb"/>
 <aop-project name="ClientServerWeb"/>
-<aop-project name="RemoteWeb"/>
-<aop-project name="SigninWeb"/>
-<aop-project name="ServletJSPWeb"/>
-<aop-project name="UIScreenWeb"/>
 <aop-project name="SessionWeb"/>
-<aop-project name="SeparateWeb"/>
-<aop-project name="FirstWeb"/>
-<aop-project name="SpringDIWeb"/>
-<aop-project name="ServletContainerWeb"/>
 <aop-project name="ExceptionWeb"/>
-<aop-project name="SimpleServletWeb"/>
-<aop-project name="RequestMessageWeb"/>
+<aop-project name="DIWeb"/>
 <aop-project name="ScopeWeb"/>
-<aop-project name="OTTT"/>
 <aop-project name="ExceptionWeb02"/>
-<aop-project name="LoginWeb"/>
 <aop-project name="SignUpWeb"/>
 <aop-project name="RedirectForwardWeb"/>
 <aop-project name="DayOfTheWeekWeb"/>
 <aop-project name="CookieWeb"/>
+<aop-project name="RequestWeb"/>
+<aop-project name="RemoteWeb"/>
+<aop-project name="SigninWeb"/>
+<aop-project name="ServletJSPWeb"/>
+<aop-project name="UIScreenWeb"/>
+<aop-project name="SeparateWeb"/>
+<aop-project name="FirstWeb"/>
+<aop-project name="SpringDIWeb"/>
+<aop-project name="ServletContainerWeb"/>
+<aop-project name="SimpleServletWeb"/>
+<aop-project name="RequestMessageWeb"/>
+<aop-project name="OTTT"/>
+<aop-project name="LoginWeb"/>
 </aop-reference-model>

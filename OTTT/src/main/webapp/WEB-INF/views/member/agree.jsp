@@ -17,8 +17,8 @@
     <div class="wrap">
       <header>
         <div class="logo">
-          <a href="#">
-            <img src="./images/logo/OTTT.png" alt="로고">
+          <a href="/main">
+            <img src="../resources/img/OTTT.png" alt="로고">
           </a>
         </div>
         <nav class="gnb">
@@ -43,7 +43,7 @@
         <div class="h-icon">
           <ul>
             <li>
-              <a href="#">
+              <a href="search">
                 <!-- <img src="./images/icon/search02.png" alt="검색"> -->
               </a>
             </li>
@@ -60,8 +60,8 @@
         <div class="wrapper">
 
           <h1 style="font-size: 21px; display: inline-block;">약관동의</h1>
-          <form method="post" action="서버의url" id="membership">
-
+          	
+			<form id = "membership" action="/member/join">
             <label class="box1" style="position: absolute; bottom: 100%; left: 70%;">
               <input type="checkbox" id="agree-all">
               모두 동의
@@ -109,15 +109,18 @@
             
              
                 <div class="back">
+                	<a href="member/login">
                     <input type="button" value="이전">
                   </a>
                 </div>
                 <div class="complate">
-                  <input type="submit" value="다음">
+                	<a href="/member/join">
+                  	  <input type="submit" value="다음">
+                  	</a>	
                 </div>
-           
+            </form>
                </div>
-              </form>
+           
     
               
 
