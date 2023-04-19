@@ -10,7 +10,7 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	  <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig"> 
         <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property> 
-        <property name="jdbcUrl" value="jdbc:log4jdbc:postgresql://localhost:5432/postgres"></property> 
+        <property name="jdbcUrl" value="jdbc:log4jdbc:postgresql://localhost:5432/OTTT"></property> 
         <property name="username" value="postgres"></property> 
         <property name="password" value="0629"></property> 
     </bean> 
