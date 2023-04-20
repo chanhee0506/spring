@@ -26,4 +26,5 @@
 <aop-project name="RequestMessageWeb"/>
 <aop-project name="OTTT"/>
 <aop-project name="LoginWeb"/>
+<aop-project name="TeamProjectTest"/>
 </aop-reference-model>
