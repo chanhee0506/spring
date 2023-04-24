@@ -16,8 +16,10 @@
 <aop-project name="RequestWeb"/>
 <aop-project name="RemoteWeb"/>
 <aop-project name="SigninWeb"/>
+<aop-project name="LoginEvWeb"/>
 <aop-project name="ServletJSPWeb"/>
 <aop-project name="UIScreenWeb"/>
+<aop-project name="SpringDAOWeb"/>
 <aop-project name="SeparateWeb"/>
 <aop-project name="FirstWeb"/>
 <aop-project name="SpringDIWeb"/>
