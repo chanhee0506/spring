@@ -95,7 +95,7 @@
     	<input type="text" name="email" class="input-field" placeholder="AdmiralLee@gamil.com" />    	
     	
     	<label>생일</label>
-    	<input type="text" name="birth" class="input-field" placeholder="2010/03/01" />  
+    	<input type="text" name="birth" class="input-field" placeholder="2010-03-01" />  
     	
 		<div class="sns-chk">
 			<label><input type="checkbox" name="sns" value="youtube" />유튜브</label>

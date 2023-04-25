@@ -1,57 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ottt</title>     
-    <script src="./script/jquery-3.6.1.min.js"></script>
-    <script src="./script/script.js"></script>
+    <title>OTTT</title>     
+    <script src="${path}/resources/js/jquery-3.6.1.min.js"></script>
+    <script src="${path}/resources/js/review.js"></script>
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
     crossorigin="anonymous">
-    <link rel="stylesheet" href="./resources/css/review.css" >  
+    <link rel="stylesheet" href="${path}/resources/css/review.css" >  
   </head>
   <body style="background-color: #202020; color: #fff;">
     <div class="wrap">
       <header>
         <div class="logo">
-          <a href="#">
-            <img src="./resources/img/OTTT.png" alt="로고">
+          <a href="/ottt">
+            <img src="${path}/resources/images/logo/OTTT.png" alt="로고">
           </a>
         </div>
         <nav class="gnb">
           <ul>
             <li>
-              <a href="#">영화&nbsp;&nbsp;</a>
+              <a href="../0413장르 폼테크추가(수형)/1. index movie.html">영화</a>
             </li>
             <li>
-              <a href="#">드라마&nbsp;</a>
+              <a href="../0413장르 폼테크추가(수형)/2. index darama.html">드라마</a>
             </li>
             <li>
-              <a href="#">예능</a>
+              <a href="../0413장르 폼테크추가(수형)/3. index interest.html">예능</a>
             </li>
             <li>
-              <a href="#">애니&nbsp;</a>
+              <a href="../0413장르 폼테크추가(수형)/4. index animation.html">애니</a>
             </li>
             <li>
-              <a href="#">게시판</a>
+              <a href="../자유게시판/자유게시판 main.html">게시판</a>
             </li>
           </ul>
         </nav>
         <div class="h-icon">
           <ul>
             <li>
-              <a class="p1" href="#">
-                 <img src="./resources/img/search02.png" alt="검색"> 
+              <a href="../OTTT 메인, 검색/search.html">
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src="./resources/img/user01.png" alt="내 정보">
+              <a href="../mypage황정현/mypage.html">
               </a>
             </li>
           </ul>
@@ -66,17 +66,17 @@
             </p>
         </div>
         <div class="banner-body">
-          <a href="#">
-            <img class="netfilx" src="./resources/img/넷플릭스.png" alt="넷플릭스아이콘">
-          </a>
-          <a href="#">
-            <img class="watcha" src="./resources/img/왓챠.png" alt="왓챠아이콘">
+          <!-- <a href="#">
+            <img class="netfilx" src="./images/icon/넷플릭스.png" alt="넷플릭스아이콘">
+          </a> -->
+          <a href="https://www.netflix.com/watch/81260280?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7Cfe45a776-cd54-4ea6-a3bc-f0f6ce3da1e0-30173404_titles%2F1%2F%2F%EC%84%9C%EB%B6%80%EC%A0%84%EC%84%A0%2F0%2F0%2CNAPA%40%40%7Cfe45a776-cd54-4ea6-a3bc-f0f6ce3da1e0-30173404_titles%2F1%2F%2F%EC%84%9C%EB%B6%80%EC%A0%84%EC%84%A0%2F0%2F0%2Cunknown%2C%2Cfe45a776-cd54-4ea6-a3bc-f0f6ce3da1e0-30173404%7C1%2CtitlesResults%2C81260280%2CVideo%3A81260280%2CdetailsPagePlayButton">
+            <img class="watcha" src="${path}/resources/images/icon/netplix.png" alt="넷플릭스아이콘">
           </a>
         </div>
       </div>      
       
       <div class="main-img">
-        <img src="./resources/img/서부 전선 이상 없다.png" alt="서부 전선 이상 없다 이미지">
+        <img src="${path}/resources/images/서부 전선 이상 없다.png" alt="서부 전선 이상 없다 이미지">
       </div>
 
       <div class="info">
@@ -87,35 +87,35 @@
           </li>
           <br>
           <li class="info-detail">
-            <span>2023·</span>
-            <span>미국·</span>
-            <span>전쟁·</span>
-            <span>148분·</span>
+            <span>2023·&nbsp;</span>
+            <span>미국·&nbsp;</span>
+            <span class="a1"><a href="#">전쟁·&nbsp;</a></span>
+            <span>148분·&nbsp;</span>
             <span>청불</span>
           </li>
           <br>
           <li class="info-director">
             <span>감독 :&nbsp;</span>
             <span>
-              <a href="#">에드워드 버거</a>
+              에드워드 버거
             </span>
           </li>
           <li class="info-main_actor">
             <span>주연 :&nbsp;</span>
             <span>
-              <a href="#">펠릭스 카머러,&nbsp;</a>
+              펠릭스 카머러,&nbsp;
             </span>
             <span>
-              <a href="#">알브레히트 슈흐</a>
+              알브레히트 슈흐
             </span>
           </li>
           <li class="info-supporting_actor">
             <span>조연 :&nbsp;</span>
             <span>
-              <a href="#">데비트 슈트리조,&nbsp;</a>                          
+             데비트 슈트리조,&nbsp;                      
             </span>            
             <span>
-              <a href="#">아드리안 그뤼</a>
+              아드리안 그뤼
             </span>
           </li>
         </ul>
@@ -124,6 +124,74 @@
 
     <section class="sec02">
       <div class="review">
+        <div class="left-score">
+          <h2>이 영화의 평균 별점</h2>
+              <div class="left-box">
+        <img class="star" src="${path}/resources/images/img/star.png" alt="별점">
+        <h3>4.9/5</h3>
+        <div class="smr">
+          <button id="saw-button"><img class="saw" src="${path}/resources/images/img/saw.png" alt="봣어요"></button>
+          <button id="mark-button"><img class="mark" src="${path}/resources/images/img/mark.png" alt="봣어요"></button>
+          <button id="review-button"><img class="review-icon" src="${path}/resources/images/img/review.png" alt="봣어요"></button>
+          <div class="review-back">1</div>
+          <div id="review-popup" class="popup11">
+            <form id="review-form">
+              <label for="review-text" style="background-color: #202020;">리뷰를 작성해주세요</label>
+              
+              <textarea id="review-text" name="review-text"></textarea>
+              <div class="reveiw-star-footer">
+                <div class="review-star" >별점을 매겨주세요:
+                  <div class="starpoint_wrap">
+                    <div class="starpoint_box">
+                      <label for="starpoint_1" class="label_star" title="0.5"><span class="blind">0.5점</span></label>
+                      <label for="starpoint_2" class="label_star" title="1"><span class="blind">1점</span></label>
+                      <label for="starpoint_3" class="label_star" title="1.5"><span class="blind">1.5점</span></label>
+                      <label for="starpoint_4" class="label_star" title="2"><span class="blind">2점</span></label>
+                      <label for="starpoint_5" class="label_star" title="2.5"><span class="blind">2.5점</span></label>
+                      <label for="starpoint_6" class="label_star" title="3"><span class="blind">3점</span></label>
+                      <label for="starpoint_7" class="label_star" title="3.5"><span class="blind">3.5점</span></label>
+                      <label for="starpoint_8" class="label_star" title="4"><span class="blind">4점</span></label>
+                      <label for="starpoint_9" class="label_star" title="4.5"><span class="blind">4.5점</span></label>
+                      <label for="starpoint_10" class="label_star" title="5"><span class="blind">5점</span></label>
+                      <input type="radio" name="starpoint" id="starpoint_1" class="star_radio">
+                      <input type="radio" name="starpoint" id="starpoint_2" class="star_radio">
+                      <input type="radio" name="starpoint" id="starpoint_3" class="star_radio">
+                      <input type="radio" name="starpoint" id="starpoint_4" class="star_radio">
+                      <input type="radio" name="starpoint" id="starpoint_5" class="star_radio">
+                      <input type="radio" name="starpoint" id="starpoint_6" class="star_radio">
+                      <input type="radio" name="starpoint" id="starpoint_7" class="star_radio">
+                      <input type="radio" name="starpoint" id="starpoint_8" class="star_radio">
+                      <input type="radio" name="starpoint" id="starpoint_9" class="star_radio">
+                      <input type="radio" name="starpoint" id="starpoint_10" class="star_radio">
+                      <span class="starpoint_bg"></span>
+                    </div>
+                  </div>
+                </div>
+   
+                <div class="review-bottom">
+                  <div class="checkedblur"><input type="checkbox" id="checkbox-blur">스포일러 포함 여부</input></div>
+                <button type="submit" id="submit-review">
+              
+                  리뷰 등록
+                </button>
+                </div>
+              </div>
+              <button type="button" id="cancel-review">
+              
+                <ul>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </button>
+            </form>
+          </div>
+          <div id="review-result">
+
+            
+          </div> 
+        </div>
+      </div>
+      </div>
         <div class="advertisement">
           <p>광고</p>
         </div>
@@ -134,40 +202,16 @@
         <div class="review-box">
           <div class="review-box-header">
             <div class="user-icon">
-              <img src="./resources/img/user.png" alt="유저 이미지파일">
+              <img src="${path}/resources/images/icon/user.png" alt="유저 이미지파일">
             </div>
             <div class="user-name">
-              <a href="#">
+              <a href="../ottt박소율/mypageshow.html">
                 유저 닉네임
               </a>
             </div>
             <ul>
               <li>
-                <div class="starpoint_wrap">
-                  <div class="starpoint_box">
-                    <label for="starpoint_1" class="label_star" title="0.5"><span class="blind">0.5점</span></label>
-                    <label for="starpoint_2" class="label_star" title="1"><span class="blind">1점</span></label>
-                    <label for="starpoint_3" class="label_star" title="1.5"><span class="blind">1.5점</span></label>
-                    <label for="starpoint_4" class="label_star" title="2"><span class="blind">2점</span></label>
-                    <label for="starpoint_5" class="label_star" title="2.5"><span class="blind">2.5점</span></label>
-                    <label for="starpoint_6" class="label_star" title="3"><span class="blind">3점</span></label>
-                    <label for="starpoint_7" class="label_star" title="3.5"><span class="blind">3.5점</span></label>
-                    <label for="starpoint_8" class="label_star" title="4"><span class="blind">4점</span></label>
-                    <label for="starpoint_9" class="label_star" title="4.5"><span class="blind">4.5점</span></label>
-                    <label for="starpoint_10" class="label_star" title="5"><span class="blind">5점</span></label>
-                    <input type="radio" name="starpoint" id="starpoint_1" class="star_radio">
-                    <input type="radio" name="starpoint" id="starpoint_2" class="star_radio">
-                    <input type="radio" name="starpoint" id="starpoint_3" class="star_radio">
-                    <input type="radio" name="starpoint" id="starpoint_4" class="star_radio">
-                    <input type="radio" name="starpoint" id="starpoint_5" class="star_radio">
-                    <input type="radio" name="starpoint" id="starpoint_6" class="star_radio">
-                    <input type="radio" name="starpoint" id="starpoint_7" class="star_radio">
-                    <input type="radio" name="starpoint" id="starpoint_8" class="star_radio">
-                    <input type="radio" name="starpoint" id="starpoint_9" class="star_radio">
-                    <input type="radio" name="starpoint" id="starpoint_10" class="star_radio">
-                    <span class="starpoint_bg"></span>
-                  </div>
-                </div>
+                <img class="star1" src="${path}/resources/images/img/star.png" alt="별점">
               </li>
               <li>
                 <div class="heart">        
@@ -176,24 +220,18 @@
                     </div>             
                 </div>
               </li>
-              <li>
-                <div class="comment">
-                  <a href="#">
-                    <img src="./resources/img/comment.png" alt="아이콘">
-                  </a>
-                </div>
-              </li>
             </ul>
           </div>
-          <div class="review-box-body">
+          <a href="/ottt/reply"><div class="review-box-body">				
             <p class="review-box-text">"내용 들어갈 자리"</p>
           </div>
+        </a>
           <div class="review-box-footer">
             <div>
               <ul>
                 <li>
                   <div class="like">
-                    <img src="./resources/img/좋아요.png" alt="좋아요아이콘">
+                    <img src="${path}/resources/images/img/좋아요.png" alt="좋아요아이콘">
                   </div>
                   <div class="like-count">
                     <p>
@@ -203,7 +241,7 @@
                 </li>
                 <li>
                   <div class="footer-comment">
-                    <img src="./resources/img/댓글.png" alt="댓글아이콘">
+                    <img src="${path}/resources/images/img/댓글.png" alt="댓글아이콘">
                   </div>
                   <div class="comment-count">
                     <p>
@@ -213,71 +251,52 @@
                 </li>
               </ul>
             </div>
-            <div>
-              <ul>
-                <li>
                   <div class="report">
-                    <a href="#">
-                      <img src="./resources/img/신고하기.png" alt="신고">
-                      <p>신고</p>
-                    </a>
+                  <button><img src="${path}/resources/images/img/신고하기.png" alt="신고"></button>
+                      <button>신고</button>
                   </div>
-                </li>
-                <li>
-                  <div class="add-comment">
-                    <a href="#">
-                      <img src="./resources/img/댓글.png" alt="댓글달기">
-                      <p>댓글달기</p>
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
           <br>
             <div class="review-box">
               <div class="review-box-header">
                 <div class="user-icon">
-                  <img src="./resources/img/user.png" alt="유저 이미지파일">
+                  <img src="${path}/resources/images/icon/user.png" alt="유저 이미지파일">
                 </div>
                 <div class="user-name">
-                  <a href="#">
+                  <a href="../ottt박소율/mypageshow.html">
                     유저 닉네임
                   </a>
                 </div>
                 <ul>
                   <li>
-                    <div class="point">
-                      <img src="./resources/img/별점 3점 .PNG" alt="3점">
+                    <img class="star1" src="${path}/resources/images/img/star.png" alt="별점">
+                    <!-- <div class="point">
+                      <img src="./images/icon/별점 3점 .PNG" alt="3점">
                       <p>3/5</p>
-                    </div>
+                    </div> -->
                   </li>
                   <li>
+                    
                     <div class="heart">        
                         <div>
                           <div class="heart_img"></div>
                         </div>             
                     </div>
                   </li>
-                  <li>
-                    <div class="comment">
-                      <a href="#">
-                        <img src="./resources/img/comment.png" alt="아이콘">
-                      </a>
-                    </div>
-                  </li>
                 </ul>
               </div>
+              <a href="/ottt/reply">
               <div class="review-box-body">
                 <p class="review-box-text">"내용 들어갈 자리"</p>
               </div>
+            </a>
               <div class="review-box-footer">
                 <div>
                   <ul>
                     <li>
                       <div class="like">
-                        <img src="./resources/img/좋아요.png" alt="좋아요아이콘">
+                        <img src="${path}/resources/images/img/좋아요.png" alt="좋아요아이콘">
                       </div>
                       <div class="like-count">
                         <p>
@@ -287,7 +306,7 @@
                     </li>
                     <li>
                       <div class="footer-comment">
-                        <img src="./resources/img/댓글.png" alt="댓글아이콘">
+                        <img src="${path}/resources/images/img/댓글.png" alt="댓글아이콘">
                       </div>
                       <div class="comment-count">
                         <p>
@@ -297,46 +316,30 @@
                     </li>
                   </ul>
                 </div>
-                <div>
-                  <ul>
-                    <li>
                       <div class="report">
-                        <a href="#">
-                          <img src="./resources/img/신고하기.png" alt="신고">
-                          <p>신고</p>
-                        </a>
+                        <button>
+                          <img src="${path}/resources/images/img/신고하기.png" alt="신고"></button>
+                        <button>신고</button>
                       </div>
-                    </li>
-                    <li>
-                      <div class="add-comment">
-                        <a href="#">
-                          <img src="./resources/img/댓글.png" alt="댓글달기">
-                          <p>댓글달기</p>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
               </div> 
           </div>         
           <br>
           <div class="review-box">
             <div class="review-box-header">
               <div class="user-icon">
-                <img src="./resources/img/user.png" alt="유저 이미지파일">
+                <img src="${path}/resources/images/icon/user.png" alt="유저 이미지파일">
               </div>
               <div class="user-name">
-                <a href="#">
+                <a href="../ottt박소율/mypageshow.html">
                   유저 닉네임
                 </a>
               </div>
               <ul>
-                <li>
-                  <div class="point">
-                    <img src="./resources/img/별점 5점 .PNG" alt="3점">
+                  <img class="star1" src="${path}/resources/images/img/star.png" alt="별점">
+                  <!-- <div class="point">
+                    <img src="./images/icon/별점 5점 .PNG" alt="3점">
                     <p>5/5</p>
-                  </div>
-                </li>
+                  </div> -->
                 <li>
                   <div class="heart">        
                       <div>
@@ -344,24 +347,19 @@
                       </div>             
                   </div>
                 </li>
-                <li>
-                  <div class="comment">
-                    <a href="#">
-                      <img src="./resources/img/comment.png" alt="아이콘">
-                    </a>
-                  </div>
-                </li>
               </ul>
             </div>
+            <a href="/ottt/reply">
             <div class="review-box-body">
               <p class="review-box-text">"내용 들어갈 자리"</p>
             </div>
+          </a>
             <div class="review-box-footer">
               <div>
                 <ul>
                   <li>
                     <div class="like">
-                      <img src="./resources/img/좋아요.png" alt="좋아요아이콘">
+                      <img src="${path}/resources/images/img/좋아요.png" alt="좋아요아이콘">
                     </div>
                     <div class="like-count">
                       <p>
@@ -371,7 +369,7 @@
                   </li>
                   <li>
                     <div class="footer-comment">
-                      <img src="./resources/img/댓글.png" alt="댓글아이콘">
+                      <img src="${path}/resources/images/img/댓글.png" alt="댓글아이콘">
                     </div>
                     <div class="comment-count">
                       <p>
@@ -381,33 +379,18 @@
                   </li>
                 </ul>
               </div>
-              <div>
-                <ul>
-                  <li>
                     <div class="report">
-                      <a href="#">
-                        <img src="./resources/img/신고하기.png" alt="신고">
-                        <p>신고</p>
-                      </a>
+                    <button>
+                        <img src="${path}/resources/images/img/신고하기.png" alt="신고"></button>
+                      <button>신고</button>
                     </div>
-                  </li>
-                  <li>
-                    <div class="add-comment">
-                      <a href="#">
-                        <img src="./resources/img/댓글.png" alt="댓글달기">
-                        <p>댓글달기</p>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <br>
           <div class="review-box">
             <div class="review-box-header">
               <div class="user-icon">
-                <img src="./resources/img/user.png" alt="유저 이미지파일">
+                <img src="${path}/resources/images/icon/user.png" alt="유저 이미지파일">
               </div>
               <div class="user-name">
                 <a href="#">
@@ -415,12 +398,12 @@
                 </a>
               </div>
               <ul>
-                <li>
-                  <div class="point">
-                    <img src="./resources/img/별점 2점 .PNG" alt="3점">
+                <img class="star1" src="${path}/resources/images/img/star.png" alt="별점">
+                  <!-- <div class="point">
+                    <img src="./images/icon/별점 2점 .PNG" alt="3점">
                     <p>2/5</p>
-                  </div>
-                </li>
+                  </div> -->
+
                 <li>
                   <div class="heart">        
                       <div>
@@ -428,24 +411,19 @@
                       </div>             
                   </div>
                 </li>
-                <li>
-                  <div class="comment">
-                    <a href="#">
-                      <img src="./resources/img/comment.png" alt="아이콘">
-                    </a>
-                  </div>
-                </li>
               </ul>
             </div>
+            <a href="/ottt/reply">
             <div class="review-box-body">
               <p class="review-box-text">"내용 들어갈 자리"</p>
             </div>
+          </a>
             <div class="review-box-footer">
               <div>
                 <ul>
                   <li>
                     <div class="like">
-                      <img src="./resources/img/좋아요.png" alt="좋아요아이콘">
+                      <img src="${path}/resources/images/img/좋아요.png" alt="좋아요아이콘">
                     </div>
                     <div class="like-count">
                       <p>
@@ -455,7 +433,7 @@
                   </li>
                   <li>
                     <div class="footer-comment">
-                      <img src="./resources/img/댓글.png" alt="댓글아이콘">
+                      <img src="${path}/resources/images/img/댓글.png" alt="댓글아이콘">
                     </div>
                     <div class="comment-count">
                       <p>
@@ -465,33 +443,18 @@
                   </li>
                 </ul>
               </div>
-              <div>
-                <ul>
-                  <li>
                     <div class="report">
-                      <a href="#">
-                        <img src="./resources/img/신고하기.png" alt="신고">
-                        <p>신고</p>
-                      </a>
+                    <button>
+                        <img src="${path}/resources/images/img/신고하기.png" alt="신고"></button>
+                      <button>신고</button>
                     </div>
-                  </li>
-                  <li>
-                    <div class="add-comment">
-                      <a href="#">
-                        <img src="./resources/img/댓글.png" alt="댓글달기">
-                        <p>댓글달기</p>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <br>
           <div class="review-box">
             <div class="review-box-header">
               <div class="user-icon">
-                <img src="./resources/img/user.png" alt="유저 이미지파일">
+                <img src="${path}/resources/images/icon/user.png" alt="유저 이미지파일">
               </div>
               <div class="user-name">
                 <a href="#">
@@ -499,12 +462,11 @@
                 </a>
               </div>
               <ul>
-                <li>
-                  <div class="point">
-                    <img src="./resources/img/별점 1점 .PNG" alt="3점">
+                  <img class="star1" src="${path}/resources/images/img/star.png" alt="별점">
+                  <!-- <div class="point">
+                    <img src="./images/icon/별점 1점 .PNG" alt="3점">
                     <p>1/5</p>
-                  </div>
-                </li>
+                  </div> -->
                 <li>
                   <div class="heart">        
                       <div>
@@ -512,24 +474,19 @@
                       </div>             
                   </div>
                 </li>
-                <li>
-                  <div class="comment">
-                    <a href="#">
-                      <img src="./resources/img/comment.png" alt="아이콘">
-                    </a>
-                  </div>
-                </li>
               </ul>
             </div>
+            <a href="/ottt/reply">
             <div class="review-box-body">
               <p class="review-box-text">"내용 들어갈 자리"</p>
             </div>
+          </a>
             <div class="review-box-footer">
               <div>
                 <ul>
                   <li>
                     <div class="like">
-                      <img src="./resources/img/좋아요.png" alt="좋아요아이콘">
+                      <img src="${path}/resources/images/img/좋아요.png" alt="좋아요아이콘">
                     </div>
                     <div class="like-count">
                       <p>
@@ -539,7 +496,7 @@
                   </li>
                   <li>
                     <div class="footer-comment">
-                      <img src="./resources/img/댓글.png" alt="댓글아이콘">
+                      <img src="${path}/resources/images/img/댓글.png" alt="댓글아이콘">
                     </div>
                     <div class="comment-count">
                       <p>
@@ -549,33 +506,19 @@
                   </li>
                 </ul>
               </div>
-              <div>
-                <ul>
-                  <li>
                     <div class="report">
-                      <a href="#">
-                        <img src="./resources/img/신고하기.png" alt="신고">
-                        <p>신고</p>
-                      </a>
+                    <button>
+                        <img src="${path}/resources/images/img/신고하기.png" alt="신고"></button>
+                      <button>신고</button>
+
                     </div>
-                  </li>
-                  <li>
-                    <div class="add-comment">
-                      <a href="#">
-                        <img src="./resources/img/댓글.png" alt="댓글달기">
-                        <p>댓글달기</p>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <br>
           <div class="review-box">
             <div class="review-box-header">
               <div class="user-icon">
-                <img src="./resources/img/user.png" alt="유저 이미지파일">
+                <img src="${path}/resources/images/icon/user.png" alt="유저 이미지파일">
               </div>
               <div class="user-name">
                 <a href="#">
@@ -583,12 +526,11 @@
                 </a>
               </div>
               <ul>
-                <li>
-                  <div class="point">
-                    <img src="./resources/img/별점 4점 .PNG" alt="3점">
+                  <img class="star1" src="${path}/resources/images/img/star.png" alt="별점">
+                  <!-- <div class="point">
+                    <img src="./images/icon/별점 4점 .PNG" alt="3점">
                     <p>4/5</p>
-                  </div>
-                </li>
+                  </div> -->
                 <li>
                   <div class="heart">        
                       <div>
@@ -596,24 +538,19 @@
                       </div>             
                   </div>
                 </li>
-                <li>
-                  <div class="comment">
-                    <a href="#">
-                      <img src="./resources/img/comment.png" alt="아이콘">
-                    </a>
-                  </div>
-                </li>
               </ul>
             </div>
+            <a href="/ottt/reply">
             <div class="review-box-body">
               <p class="review-box-text">"내용 들어갈 자리"</p>
             </div>
+          </a>
             <div class="review-box-footer">
               <div>
                 <ul>
                   <li>
                     <div class="like">
-                      <img src="./resources/img/좋아요.png" alt="좋아요아이콘">
+                      <img src="${path}/resources/images/img/좋아요.png" alt="좋아요아이콘">
                     </div>
                     <div class="like-count">
                       <p>
@@ -623,7 +560,7 @@
                   </li>
                   <li>
                     <div class="footer-comment">
-                      <img src="./resources/img/댓글.png" alt="댓글아이콘">
+                      <img src="${path}/resources/images/img/댓글.png" alt="댓글아이콘">
                     </div>
                     <div class="comment-count">
                       <p>
@@ -633,33 +570,18 @@
                   </li>
                 </ul>
               </div>
-              <div>
-                <ul>
-                  <li>
                     <div class="report">
-                      <a href="#">
-                        <img src="./resources/img/신고하기.png" alt="신고">
-                        <p>신고</p>
-                      </a>
+                    <button>
+                        <img src="${path}/resources/images/img/신고하기.png" alt="신고"></button>
+                      <button>신고</button>
                     </div>
-                  </li>
-                  <li>
-                    <div class="add-comment">
-                      <a href="#">
-                        <img src="./resources/img/댓글.png" alt="댓글달기">
-                        <p>댓글달기</p>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <br>
           <div class="review-box">
             <div class="review-box-header">
               <div class="user-icon">
-                <img src="./resources/img/user.png" alt="유저 이미지파일">
+                <img src="${path}/resources/images/icon/user.png" alt="유저 이미지파일">
               </div>
               <div class="user-name">
                 <a href="#">
@@ -667,12 +589,11 @@
                 </a>
               </div>
               <ul>
-                <li>
-                  <div class="point">
-                    <img src="./resources/img/별점 5점 .PNG" alt="3점">
+                <img class="star1" src="${path}/resources/images/img/star.png" alt="별점">
+                  <!-- <div class="point">
+                    <img src="./images/icon/별점 5점 .PNG" alt="3점">
                     <p>5/5</p>
-                  </div>
-                </li>
+                  </div> -->
                 <li>
                   <div class="heart">        
                       <div>
@@ -680,24 +601,19 @@
                       </div>             
                   </div>
                 </li>
-                <li>
-                  <div class="comment">
-                    <a href="#">
-                      <img src="./resources/img/comment.png" alt="아이콘">
-                    </a>
-                  </div>
-                </li>
               </ul>
             </div>
+            <a href="/ottt/reply">
             <div class="review-box-body">
               <p class="review-box-text">"내용 들어갈 자리"</p>
             </div>
+          </a>
             <div class="review-box-footer">
               <div>
                 <ul>
                   <li>
                     <div class="like">
-                      <img src="./resources/img/좋아요.png" alt="좋아요아이콘">
+                      <img src="${path}/resources/images/img/좋아요.png" alt="좋아요아이콘">
                     </div>
                     <div class="like-count">
                       <p>
@@ -707,7 +623,7 @@
                   </li>
                   <li>
                     <div class="footer-comment">
-                      <img src="./resources/img/댓글.png" alt="댓글아이콘">
+                      <img src="${path}/resources/images/img/댓글.png" alt="댓글아이콘">
                     </div>
                     <div class="comment-count">
                       <p>
@@ -717,26 +633,12 @@
                   </li>
                 </ul>
               </div>
-              <div>
-                <ul>
-                  <li>
                     <div class="report">
-                      <a href="#">
-                        <img src="./resources/img/신고하기.png" alt="신고">
-                        <p>신고</p>
-                      </a>
+                    <button>
+                        <img src="${path}/resources/images/img/신고하기.png" alt="신고"></button>
+                      <button>신고</button>
+
                     </div>
-                  </li>
-                  <li>
-                    <div class="add-comment">
-                      <a href="#">
-                        <img src="./resources/img/댓글.png" alt="댓글달기">
-                        <p>댓글달기</p>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
       </div>

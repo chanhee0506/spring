@@ -9,6 +9,9 @@
     
      
 }
+button{
+    all: unset;
+}
 
 a{
     text-decoration: none;
@@ -114,8 +117,8 @@ header{
 
 
 
-.h-icon > ul > li:first-child > a > img{
-    background:url("./resources/img/search02.png");
+.h-icon > ul > li:first-child > a{
+    background:url("../../images/icon/search02.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;
@@ -123,8 +126,8 @@ header{
     height: 32px;
 }
 
-.h-icon > ul > li:last-child > a > img{
-    background:url("./resources/img/user01.png");
+.h-icon > ul > li:last-child > a{
+    background:url("../../images/img/profile.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;
@@ -133,7 +136,7 @@ header{
 }
 
 .h-icon > ul > li:first-child > a:hover{
-    background: url("./resources/img/search-h.png");
+    background: url("../../images/icon/search-h.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;
@@ -141,14 +144,14 @@ header{
     height: 32px;
 }
 
-.h-icon > ul > li:last-child > a:hover{
-    background: url("./resources/img/user-h.png");
+/*  .h-icon > ul > li:last-child > a:hover{
+    background: url("../../images/icon/user-h.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;
     width: 32px;
     height: 32px;
-}
+}  */
 
 /* main */
 
@@ -215,6 +218,16 @@ header{
 
 }
 
+.a1 > a{
+    display: inline;
+    color: #33ff33;
+}
+
+
+.info-detail{
+    display: flex;
+}
+
 .info {
     margin-left: 30px;
  
@@ -251,6 +264,287 @@ header{
     position: relative;  
      
 }
+.left-box{
+    width: 360px;
+    height: 500px;
+
+    position: absolute;
+  
+  
+}
+
+
+
+.star1{
+    position: absolute;
+    right: 60px;
+    top: 15px;
+    width: 100px;
+    height: auto;
+}
+
+
+.left-box h3{
+    top: 4px;
+    font-size: 25px;
+}
+
+.left-score{
+    width: 360px;
+    height: 50px;
+}
+
+.left-score h2{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.star{
+    position: absolute;
+
+
+}
+
+.left-box > h3{
+    position: absolute;
+    right: 90px;
+}
+
+.star{
+    margin-left: 10px;
+    width: 188px;
+    height: 35px;
+}
+
+.smr{
+    width: 360px;
+    margin: 60px 0 0 0;
+    display: flex;
+        
+}
+
+.smr button:nth-child(2){
+    margin-left: 23px;
+}
+
+.smr > button{
+    background-color: #202020;
+    border: none;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+
+
+.mark{
+    background-color: #202020;
+}
+
+
+
+.review-icon{
+    width: 80px;
+    object-fit: cover;
+}
+
+.button:nth-child(2) img{
+    
+    scale: 0.87;
+
+}
+
+/*리뷰팝업 시작*/
+/*리뷰창 팝업*/
+
+
+
+.review-back {
+    display: none;
+    color: #fff;
+    text-indent: -9999px;
+    font-size: 500px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+
+  .popup11{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+    width: 795px;
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  .popup11 form {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    /* background-color: white; */
+
+    box-sizing: border-box;
+  }
+
+  #submit-review{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #202020;
+    color: #33ff33;
+    border-radius: 7px;
+    text-align: center;
+  }
+
+  #review-text{
+    width: 794px;
+    height: 500px;
+    /* position:absolute;
+    top: 100px;
+    right: 0px; */
+    border-radius: 0;
+}
+textarea{
+    background-color: #202020;
+    color: #fff;
+}
+
+
+form label{
+    /* position: absolute; */
+    font-size: 25px;
+    color: #fff;
+    /* top: 92px;
+    left: 0px; */
+    width: 800px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+  
+  #review-result {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  #cancel-review{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 7.5px;
+    right: 10px;
+    background-color: #0ba70b;
+    border-radius: 7px;
+}
+#cancel-review > ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+#cancel-review > ul > li{
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 9.7%;
+    transform: translate(-50%,-50%);
+    border-radius: 3px;
+}
+
+
+
+#cancel-review > ul > li:first-child{
+    transform: rotate(45deg);
+}
+
+#cancel-review > ul > li:last-child{
+    transform: rotate(135deg);
+}
+
+#cancel-review:hover > ul{
+    transform: rotate(180deg);
+}
+
+.checkedblur{
+    cursor: pointer;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+}
+
+.checkedblur > input{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    transform: translateY(4px);
+}
+
+
+
+.reveiw-star-footer{
+    background-color: #202020;
+    width: 100%;
+    height: 40px;
+    /* left: 0px;
+    bottom: 0px;
+    position: absolute; */
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: left;
+    transform: translateY(-4.5px);
+}
+
+.reveiw-star-footer > div{
+    display: inline-block;
+    /* transform: translateY(-5px); */
+}
+
+.review-star{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 5px;
+}
+
+.star3{
+    width: 120px;
+    object-fit: cover;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.review-bottom{
+    width: 490px;
+    height: 40px;
+    text-align: right;
+    line-height: 40px;
+}
+
+.review-bottom > div{
+    display: inline-block;
+}
+
+
+  
+/*리뷰팝업 종료*/
+  
+
 
 .advertisement{
     border: 1px solid #fff;
@@ -258,7 +552,8 @@ header{
     width: 15rem; 
     height: 25rem; 
     position: absolute;
-    margin-top: 130px;
+    margin-top: 300px;
+    left: 30px;
     
 }
 
@@ -313,7 +608,12 @@ header{
     margin-left: 15px;
 }
 
-.point > img{
+
+
+
+
+
+ .point > img{
     position: absolute;
     right: 190px;
     top: 8px;
@@ -326,9 +626,9 @@ header{
     position: absolute;
     right: 140px;
     top: 4px;
-}
+} 
 
-.starpoint_wrap{   
+ .starpoint_wrap{   
     position: absolute;
     right: 150px;
     top: 15px;
@@ -338,6 +638,11 @@ header{
     position:relative;
     background:url(https://ido-archive.github.io/svc/etc/element/img/sp_star.png) 0 0 no-repeat;
     font-size:0;
+    width: 100px;
+    height: 20px;
+
+    right: 410px;
+    bottom: 4px;
 }
 
 .starpoint_box .starpoint_bg{
@@ -412,20 +717,20 @@ header{
 .starpoint_box .star_radio:nth-of-type(10):hover ~ .starpoint_bg,
 .starpoint_box .star_radio:nth-of-type(10):checked ~ .starpoint_bg{
     width:100%;
-}
+} 
 
-.blind{
+ .blind{
     position:absolute;
     clip:rect(0 0 0 0);
     margin:-1px;
     width:1px;
     height: 1px;
     overflow:hidden;
-}
+} 
 
 .heart{   
     position: absolute;
-    right: 100px;
+    right: 30px;
     top: 25px;
 }
 
@@ -482,7 +787,7 @@ header{
 
 .like {
     position: absolute;
-    top: 9px;
+    top: 5px;
     left: 10px;
 }
 
@@ -494,7 +799,7 @@ header{
 
 .footer-comment{
     position: absolute;
-    top: 9px;
+    top: 5px;
     left: 110px;
 }
 
@@ -504,17 +809,19 @@ header{
     left: 140px;
 }
 
-.report > a > img {
+.report button img{
     position: absolute;
-    top: 16.5px;
-    right: 153px; 
+    right: 55px;
+    bottom: 10px;
 }
 
-.report > a > p {
+.report button:last-child {
     position: absolute;
-    top: 11.5px;
-    right: 120px; 
+    right: 20px;
+    bottom: 9px;
 }
+
+
 
 .add-comment > a > img {
     position: absolute;
