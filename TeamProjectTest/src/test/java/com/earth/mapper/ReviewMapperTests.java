@@ -20,10 +20,10 @@ public class ReviewMapperTests {
 	@Test
 	public void replyEnrollTest() {
 		
-		String id = "test2";
-		int content_no = 1;
+		String id = "test3";
+		int content_no = 2;
 		int rating = 4;
-		String content = "댓글 테스트33";
+		String content = "댓글 테스트333";
 		
 		
 		ReviewDTO dto = new ReviewDTO();
