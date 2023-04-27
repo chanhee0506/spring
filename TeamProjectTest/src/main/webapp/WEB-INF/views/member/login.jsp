@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import= "java.net.URLDecoder"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>    
 
@@ -23,7 +24,7 @@
       <header>
         <div class="logo">
           <a href="/main">
-            <img src="../resources/img/OTTT.png" alt="로고">
+            <img src="../resources/images/logo/OTTT.png" alt="로고">
           </a>
         </div>
         <nav class="gnb">
@@ -65,19 +66,23 @@
             </c:if>
          
         <div class = "Login">   
-          <img src = "../resources/img/OTTTLOGIN.png" width="300" height="80">
+          <img src = "../resources/images/logo/OTTT.png" width="300" height="80">
           
        
       
 
           <form method="post" id="login_form">
           <div class="hihi">
-            <input type="text"  name="memberId" placeholder="아이디" class="id_input">
+            <input type="text"  name="memberId" placeholder="아이디" class="id_input" value="${cookie.id.value}">
             <input type="password"  name="memberPw"  placeholder="비밀번호" class="pw_input">
             <input type="submit" class="login_button
             " value="로그인" >
+            <input type="hidden" name="toURL" value= "${param.toURL }" />
 
             </div>
+            	<div class= "remember">
+					<label><input type="checkbox" name="rememberId" value="on" ${empty cookie.id.value ? "" : "checked"} />아이디 기억</label>
+				</div>
 
             <a>
             <input type="button" value="회원가입" onClick="location.href='/member/agree'" class="join" >
@@ -85,15 +90,15 @@
             <input type="button" value="비밀번호 찾기" onClick="location.href='#'" class="join">
             </a>
             
-            <img src = "../resources/img/ㄴㅂ.png" width="290" height="40" class="naver">
+            <img src = "../resources/images/img/ㄴㅂ.png" width="290" height="40" class="naver">
             
         
             
-            <img src = "../resources/img/카톡.png" width="290" height="40" class="kakao">
+            <img src = "../resources/images/img/카톡.png" width="290" height="40" class="kakao">
             
            
             
-            <img src = "../resources/img/구글로그인.png" width="290" height="40" class="google">
+            <img src = "../resources/images/img/구글로그인.png" width="290" height="40" class="google">
             
         </form>
          </div>

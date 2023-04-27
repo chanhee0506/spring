@@ -18,7 +18,7 @@
       <header>
         <div class="logo">
           <a href="/main">
-            <img src="../resources/img/OTTT.png" alt="로고">
+            <img src="../resources/images/logo/OTTT.png" alt="로고">
           </a>
         </div>
         <nav class="gnb">
@@ -60,7 +60,7 @@
                 <div class = "login_warn">사용자 ID 또는 비밀번호를 잘못 입력하셨습니다.</div>
             </c:if>
          <div class = "Login">   
-          <img src = "../resources/img/OTTTLOGIN.png" width="300" height="80">
+          <img src = "../resources/images/logo/OTTT.png" width="300" height="80">
           <h1 style="font-size: 30px; display: inline-block;">환영합니다!</h1>
           
        

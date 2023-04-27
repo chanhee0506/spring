@@ -28,7 +28,7 @@ public class ReviewMapperTests {
 		
 		ReviewDTO dto = new ReviewDTO();
 		dto.setRating(rating);
-		dto.setMemberId(id);
+		//dto.setMemberId(id);
 		dto.setReview_content(content);
 		dto.setContent_no(content_no);
 		

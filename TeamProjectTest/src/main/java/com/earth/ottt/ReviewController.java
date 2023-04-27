@@ -10,14 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.earth.model.ReviewDTO;
 import com.earth.service.ReviewService;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
 @Controller
+@AllArgsConstructor
 public class ReviewController {
 	
 	
-	@RequestMapping(value = "/review", method = RequestMethod.GET)
+	@RequestMapping(value = "/review", method = {RequestMethod.GET,RequestMethod.POST})
 	public void reviewPageGET() {
 	
 	}
@@ -27,7 +29,9 @@ public class ReviewController {
 	
 	/* 댓글 등록 */
 	@PostMapping("/enroll")
-	public void enrollReviewPOST(ReviewDTO dto) {
+	public String enrollReviewPOST(ReviewDTO dto) throws Exception {
+		System.out.println("컨트롤러 넘어감");
 		reviewService.enrollReview(dto);
+		return "redirect:/review";
 	}
 }

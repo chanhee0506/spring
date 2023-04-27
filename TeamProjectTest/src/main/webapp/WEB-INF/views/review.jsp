@@ -21,7 +21,7 @@
     <div class="wrap">
       <header>
         <div class="logo">
-          <a href="/ottt">
+          <a href="/main">
             <img src="${path}/resources/images/logo/OTTT.png" alt="로고">
           </a>
         </div>
@@ -134,24 +134,24 @@
           <button id="mark-button"><img class="mark" src="${path}/resources/images/img/mark.png" alt="봣어요"></button>
           <button id="review-button"><img class="review-icon" src="${path}/resources/images/img/review.png" alt="봣어요"></button>
           <div class="review-back">1</div>
+          <form id="review-form" method="post">
           <div id="review-popup" class="popup11">
-            <form id="review-form">
               <label for="review-text" style="background-color: #202020;">리뷰를 작성해주세요</label>
-              
-              <textarea id="review-text" name="review-text"></textarea>
+              <!-- <input type="text" name="review_content"/> -->
+              <textarea id="review-text" name="review_content"></textarea> 
               <div class="reveiw-star-footer">
                 <div class="review-star" >별점을 매겨주세요:
                   <div class="starpoint_wrap">
-                    <div class="starpoint_box">
-                      <label for="starpoint_1" class="label_star" title="0.5"><span class="blind">0.5점</span></label>
+                    <div class="starpoint_box" name="rating" >
+                      <!-- <label for="starpoint_1" class="label_star" title="0.5"><span class="blind">0.5점</span></label> -->
                       <label for="starpoint_2" class="label_star" title="1"><span class="blind">1점</span></label>
-                      <label for="starpoint_3" class="label_star" title="1.5"><span class="blind">1.5점</span></label>
+                      <!-- <label for="starpoint_3" class="label_star" title="1.5"><span class="blind">1.5점</span></label> -->
                       <label for="starpoint_4" class="label_star" title="2"><span class="blind">2점</span></label>
-                      <label for="starpoint_5" class="label_star" title="2.5"><span class="blind">2.5점</span></label>
+                      <!-- <label for="starpoint_5" class="label_star" title="2.5"><span class="blind">2.5점</span></label> -->
                       <label for="starpoint_6" class="label_star" title="3"><span class="blind">3점</span></label>
-                      <label for="starpoint_7" class="label_star" title="3.5"><span class="blind">3.5점</span></label>
+                     <!--  <label for="starpoint_7" class="label_star" title="3.5"><span class="blind">3.5점</span></label> -->
                       <label for="starpoint_8" class="label_star" title="4"><span class="blind">4점</span></label>
-                      <label for="starpoint_9" class="label_star" title="4.5"><span class="blind">4.5점</span></label>
+                      <!-- <label for="starpoint_9" class="label_star" title="4.5"><span class="blind">4.5점</span></label> -->
                       <label for="starpoint_10" class="label_star" title="5"><span class="blind">5점</span></label>
                       <input type="radio" name="starpoint" id="starpoint_1" class="star_radio">
                       <input type="radio" name="starpoint" id="starpoint_2" class="star_radio">
@@ -167,12 +167,13 @@
                     </div>
                   </div>
                 </div>
-   
+   				</form>
                 <div class="review-bottom">
                   <div class="checkedblur"><input type="checkbox" id="checkbox-blur">스포일러 포함 여부</input></div>
-                <button type="submit" id="submit-review">
-              
+                <button type="submit" class="enroll_btn">
+              	  <a >
                   리뷰 등록
+                  </a>
                 </button>
                 </div>
               </div>
@@ -183,12 +184,42 @@
                   <li></li>
                 </ul>
               </button>
-            </form>
+            
           </div>
           <div id="review-result">
 
             
           </div> 
+          <script>
+     	  $(".enroll_btn").on("click", function(e){
+
+    	 const rating = $("select").val(); 
+    		const review_content = $("textarea").val();
+
+    		const data = {
+    				 rating : rating, 
+    				review_content : review_content
+    		}		
+    		
+    		$.ajax({
+    			data : data,
+    			type : 'POST',
+    			url : '/enroll',
+    			success : function(result){
+    				window.close();
+    			}
+    			
+    		});	
+      	});    
+   
+         /* $(document).ready(function(){ */
+      	  /* $(".enroll_btn").click(function(){
+          	//회원가입 버튼(회원가입 기능 작동)
+      	$("#review-form").attr("action", "/enroll");
+  		$("#review-form").submit();
+      	}); */
+        /* });  */
+          </script>
         </div>
       </div>
       </div>

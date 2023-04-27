@@ -1,10 +1,13 @@
 package com.earth.ottt;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -84,13 +87,15 @@ public class MemberController {
 	
     /* 로그인 */
     @RequestMapping(value="/login", method=RequestMethod.POST)
-    public String loginPOST(HttpServletRequest request, MemberVO member, RedirectAttributes rttr) throws Exception{
+    public String loginPOST(HttpServletRequest request, MemberVO member, RedirectAttributes rttr, HttpServletResponse response, boolean rememberId) throws Exception{
         
 //        System.out.println("login 메서드 진입");
 //        System.out.println("전달된 데이터 : " + member);
     	
     	 HttpSession session = request.getSession();
     	 MemberVO lvo = memberservice.memberLogin(member);
+    	 
+    	 
     	 
  
     	 
@@ -104,10 +109,26 @@ public class MemberController {
          
          session.setAttribute("member", lvo);             // 일치하는 아이디, 비밀번호 경우 (로그인 성공)
         
+         if(rememberId) {
+     		Cookie cookie = new Cookie("memberId", member.getMemberId());
+			response.addCookie(cookie);
+		}
+		else {
+			//2-3-1. 쿠키를 삭제
+			//2-3-2. 응답헤더에 저장
+			Cookie cookie = new Cookie("id",member.getMemberId());
+			cookie.setMaxAge(0);
+			response.addCookie(cookie);
+		}
+         
          return "redirect:/main";
+ 		
+}
+         
         
-        
-    }
+    
+    
+    
     
     /* 회원가입완료페이지로그인 */
     @RequestMapping(value="/joincomplete", method=RequestMethod.POST)
@@ -135,5 +156,14 @@ public class MemberController {
         
         
     }
-	
+    
+    // 로그아웃
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		//세션 종료
+		session.invalidate();
+		//홈으로 이동
+		return "redirect:/main";
+		
+	}
 }

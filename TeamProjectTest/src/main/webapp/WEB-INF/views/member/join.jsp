@@ -18,7 +18,7 @@
       <header>
         <div class="logo">
           <a href="/main">
-            <img src="../resources/img/OTTT.png" alt="로고">
+            <img src="../resources/images/logo/OTTT.png" alt="로고">
           </a>
         </div>
         <nav class="gnb">

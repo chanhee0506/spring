@@ -5,5 +5,5 @@ import com.earth.model.ReviewDTO;
 public interface ReviewService {
 
 	/* 댓글 등록 */
-	public int enrollReview(ReviewDTO dto);
+	public void enrollReview(ReviewDTO dto) throws Exception;
 }

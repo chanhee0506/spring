@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/> 
+<c:set var="loginout" value="${member == null ? 'logout' : 'login'}" />
+<c:set var="loginoutlink" value="${member ==null ? '/member/login' : '/mypage'}" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,13 +27,13 @@
 </head>
 <body style="background-color: #202020; color: #fff;">
     <div class="wrap"> 
-        <div style="background-color: black; text-align: center; height: 1080px;">
-            <img src="./resources/img/메인이미지.png" style="width: 1200px; background-position: center; margin-top: 150px;"/>
-            <a href="/member/login" class="user-img">
+        <div style="background-color: black; text-align: center; height: 1080px;" class="main-header">
+            <img src="./resources/images/logo/메인이미지.png" style="width: 1200px; background-position: center; margin-top: 150px;"/>           
+            <a href="<c:url value='${loginoutlink}' /> "  class="${loginout}">
                 <!-- <img src="./image/icon/user01.png" class="main-icon"/> -->
             </a>
             <div>
-                <img src="./resources/img/메인 OTTT.png" style="position: relative; top: -600px; width: 700px;"/>
+                <img src="./resources/images/logo/메인 OTTT.png" style="position: relative; top: -600px; width: 700px;"/>
             </div>
             <br/>
             <span class="main-search">
@@ -54,7 +56,7 @@
         <header class="header" style="position: sticky; top: 0;">
             <div class="logo">
             <a href="#">
-                <img src="./resources/img/OTTT.png" alt="로고">
+                <img src="./resources/images/logo/OTTT.png" alt="로고">
             </a>
             </div>
             <nav class="gnb">
@@ -84,7 +86,7 @@
                 </a>
                 </li>
                 <li>
-                <a class="p4" href="/member/login">
+                <a href="<c:url value='${loginoutlink}' /> "  class="${loginout}">
                     <!-- <img src="./image/icon/user01.png" alt="내 정보"> -->
                 </a>
                 </li>
@@ -95,12 +97,38 @@
         <section class="sec_2">
             <div style="font-size: 23px; margin-left: 20px; margin-top: 20px;">별점 높은 작품들</div>
             <div class="main-work">
-                <button class="left-button1"><img src="./resources/img/왼쪽 화살표.png" /></button>
+                <button class="left-button1"><img src="./resources/images/img/왼쪽 화살표.png" /></button>
                 <div class="cont01">
                     <div class="posterzip1">
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/subu.jpg" class="poster"/>
+                                <div class="work-review">
+                                    <div><img src="./resources/images/img/3star.png" /></div>
+                                    <div>
+                                        <a href="#">찜</a>
+                                        <a href="/review">리뷰쓰기</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="work-info">
+                            <a href="#">
+                                <img src="./resources/images/poster/동감.jpg" class="poster"/>
+                                <div class="work-review">
+                                    <div><img src="./resources/images/img/3star.png" /></div>
+                                    <div>
+                                        <a href="#">찜</a>
+                                        <a href="#">리뷰쓰기</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="work-info">
+                            <a href="#">
+                                <img src="./resources/images/poster/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -113,7 +141,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/동감.jpg" class="poster"/>
+                                <img src="./resources/images/poster/더 글로리.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -126,7 +154,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
+                                <img src="./resources/images/poster/나는 솔로.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -139,7 +167,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/더 글로리.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -152,7 +180,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/나는 솔로.jpg" class="poster"/>
+                                <img src="./resources/images/poster/대외비.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -165,7 +193,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -178,7 +206,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/대외비.jpg" class="poster"/>
+                                <img src="./resources/images/poster/동감.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -191,7 +219,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -204,7 +232,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/동감.jpg" class="poster"/>
+                                <img src="./resources/images/poster/더 글로리.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -217,7 +245,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
+                                <img src="./resources/images/poster/나는 솔로.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -230,7 +258,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/더 글로리.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -243,33 +271,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/나는 솔로.jpg" class="poster"/>
-                                <div class="work-review">
-                                    <div><img src="./resources/img/별점.png" /></div>
-                                    <div>
-                                        <a href="#">찜</a>
-                                        <a href="#">리뷰쓰기</a>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="work-info">
-                            <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
-                                <div class="work-review">
-                                    <div><img src="./resources/img/별점.png" /></div>
-                                    <div>
-                                        <a href="#">찜</a>
-                                        <a href="#">리뷰쓰기</a>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="work-info">
-                            <a href="#">
-                                <img src="./resources/img/대외비.jpg" class="poster"/>
+                                <img src="./resources/images/poster/대외비.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -285,17 +287,17 @@
                     </div>
                 </div>
                 
-                <button class="right-button1"><img src="./resources/img/화살표.png"/></button>
+                <button class="right-button1"><img src="./resources/images/img/화살표.png"/></button>
             </div>
             <br />
             <div style="font-size: 23px; margin-left: 20px;">지금 HOT한 작품들</div>
             <div class="main-work">
-                <button class="left-button2"><img src="./resources/img/왼쪽 화살표.png" /></button>
+                <button class="left-button2"><img src="./resources/images/img/왼쪽 화살표.png" /></button>
                 <div class="cont01">
                     <div class="posterzip2">
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -308,7 +310,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/동감.jpg" class="poster"/>
+                                <img src="./resources/images/poster/동감.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -321,7 +323,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
+                                <img src="./resources/images/poster/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -334,7 +336,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/더 글로리.jpg" class="poster"/>
+                                <img src="./resources/images/poster/더 글로리.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -347,7 +349,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/나는 솔로.jpg" class="poster"/>
+                                <img src="./resources/images/poster/나는 솔로.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -360,7 +362,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -373,7 +375,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/대외비.jpg" class="poster"/>
+                                <img src="./resources/images/poster/대외비.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -386,7 +388,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -399,7 +401,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/동감.jpg" class="poster"/>
+                                <img src="./resources/images/poster/동감.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -412,7 +414,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
+                                <img src="./resources/images/poster/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -425,7 +427,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/더 글로리.jpg" class="poster"/>
+                                <img src="./resources/images/poster/더 글로리.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -438,7 +440,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/나는 솔로.jpg" class="poster"/>
+                                <img src="./resources/images/poster/나는 솔로.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -451,7 +453,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -464,7 +466,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/대외비.jpg" class="poster"/>
+                                <img src="./resources/images/poster/대외비.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -477,17 +479,17 @@
                     </div>
                 </div>
                 
-                <button class="right-button2"><img src="./resources/img/화살표.png"/></button>
+                <button class="right-button2"><img src="./resources/images/img/화살표.png"/></button>
             </div>
             <br/>
             <div style="font-size: 23px; margin-left: 20px;">추천 작품들</div>
             <div class="main-work">
-                <button class="left-button3"><img src="./resources/img/왼쪽 화살표.png" /></button>
+                <button class="left-button3"><img src="./resources/images/img/왼쪽 화살표.png" /></button>
                 <div class="cont01">
                     <div class="posterzip3">
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -500,7 +502,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/동감.jpg" class="poster"/>
+                                <img src="./resources/images/poster/동감.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -513,7 +515,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
+                                <img src="./resources/images/poster/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -526,7 +528,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/더 글로리.jpg" class="poster"/>
+                                <img src="./resources/images/poster/더 글로리.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -539,7 +541,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/나는 솔로.jpg" class="poster"/>
+                                <img src="./resources/images/poster/나는 솔로.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -552,7 +554,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -565,7 +567,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/대외비.jpg" class="poster"/>
+                                <img src="./resources/images/poster/대외비.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -578,7 +580,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/서부전선.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -591,7 +593,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/동감.jpg" class="poster"/>
+                                <img src="./resources/images/poster/동감.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -604,7 +606,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
+                                <img src="./resources/images/poster/스마트폰을 떨어뜨렸을 뿐인데.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -617,7 +619,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/더 글로리.jpg" class="poster"/>
+                                <img src="./resources/images/poster/더 글로리.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -630,7 +632,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/나는 솔로.jpg" class="poster"/>
+                                <img src="./resources/images/poster/나는 솔로.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -643,7 +645,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/서부전선.jpg" class="poster"/>
+                                <img src="./resources/images/poster/subu.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -656,7 +658,7 @@
 
                         <div class="work-info">
                             <a href="#">
-                                <img src="./resources/img/대외비.jpg" class="poster"/>
+                                <img src="./resources/images/poster/대외비.jpg" class="poster"/>
                                 <div class="work-review">
                                     <div><img src="./resources/img/별점.png" /></div>
                                     <div>
@@ -669,7 +671,7 @@
                     </div>
                 </div>
                 
-                <button class="right-button3"><img src="./resources/img/화살표.png"/></button>
+                <button class="right-button3"><img src="./resources/images/img/화살표.png"/></button>
             </div>
             
         </section>

@@ -6,9 +6,7 @@
  	
  	  	<!-- 댓글등록 -->
   	<insert id="enrollReview">
-  	
-  		insert into ottt_review(rating, memberId, review_content, content_no) values(#{rating}, #{memberId}, #{review_content}, #{content_no})
-  	
+  		insert into ottt_review(review_content,rating,memberId) values(#{review_content},#{rating},#{memberId})
   	</insert>
  	
   </mapper>
