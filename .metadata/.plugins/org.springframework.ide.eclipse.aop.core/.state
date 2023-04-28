@@ -3,12 +3,13 @@
 <aop-project name="AnnotationWeb"/>
 <aop-project name="ClientServerWeb"/>
 <aop-project name="SpringDBWeb"/>
-<aop-project name="SessionWeb"/>
 <aop-project name="TDDWeb"/>
+<aop-project name="SessionWeb"/>
 <aop-project name="ExceptionWeb"/>
 <aop-project name="DIWeb"/>
 <aop-project name="ScopeWeb"/>
 <aop-project name="ExceptionWeb02"/>
+<aop-project name="UserTotalWeb"/>
 <aop-project name="SignUpWeb"/>
 <aop-project name="RedirectForwardWeb"/>
 <aop-project name="DayOfTheWeekWeb"/>
