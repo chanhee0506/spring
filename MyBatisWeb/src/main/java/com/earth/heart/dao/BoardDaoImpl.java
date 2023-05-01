@@ -1,5 +1,9 @@
 package com.earth.heart.dao;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -29,6 +33,33 @@ public class BoardDaoImpl implements BoardDao{
 	public int insert(BoardDTO dto) throws Exception {
 		
 		return session.insert(namespace + "insert", dto);
+	}
+
+	@Override
+	public int count() throws Exception {
+
+		return session.selectOne(namespace + "count");
+	}
+
+	@Override
+	public List<BoardDTO> selectAll() throws Exception {
+		
+		return session.selectList(namespace + "selectAll");
+	}
+
+	@Override
+	public int delete(Integer bno, String writer) throws Exception {
+		Map map = new HashMap();		//파라미터 타입이 map이기 때문에 map을 생성
+		map.put("bno", bno);
+		map.put("writer", writer);
+		
+		return session.delete(namespace + "delete", map);
+	}
+
+	@Override
+	public int update(BoardDTO boardDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return session.update(namespace + "update", boardDTO);
 	}
 
 	

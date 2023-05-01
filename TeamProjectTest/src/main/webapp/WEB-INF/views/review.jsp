@@ -142,7 +142,7 @@
               <div class="reveiw-star-footer">
                 <div class="review-star" >별점을 매겨주세요:
                   <div class="starpoint_wrap">
-                    <div class="starpoint_box" name="rating" >
+                    <div class="starpoint_box" id="abc" >
                       <label for="starpoint_1" class="label_star" title="0.5"><span class="blind">0.5점</span></label> 
                       <label for="starpoint_2" class="label_star" title="1"><span class="blind">1점</span></label>
                       <label for="starpoint_3" class="label_star" title="1.5"><span class="blind">1.5점</span></label> 
@@ -171,7 +171,7 @@
                 <div class="review-bottom">
                   <div class="checkedblur"><input type="checkbox" id="checkbox-blur">스포일러 포함 여부</input></div>
                 <button type="submit" class="enroll_btn">
-              	  <a >
+              	  <a>
                   리뷰 등록
                   </a>
                 </button>
@@ -191,14 +191,13 @@
             
           </div> 
           <script>
-     	  $(".enroll_btn").on("click", function(e){
+          $(".enroll_btn").on("click", function(e){
+        	    const rating = $("input[name=starpoint]:checked").siblings("label").attr("title");
+        	    const review_content = $("textarea").val();
+        	    const data = {
+        	        rating : rating, 
+        	        review_content : review_content
 
-    		const rating = $("select").val(); 
-    		const review_content = $("textarea").val();
-
-    		const data = {
-    				 rating : rating, 
-    				review_content : review_content
     		}		
     		
     		$.ajax({

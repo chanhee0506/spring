@@ -34,4 +34,6 @@ public class ReviewController {
 		reviewService.enrollReview(dto);
 		return "redirect:/review";
 	}
+	
+	
 }

@@ -5,7 +5,7 @@ import java.util.Date;
 public class ReviewDTO {
 
 	private int 	review_no;
-	private int 	rating;
+	private double rating;
 	private String 	review_content;
 	private Date 	review_creat_dt;
 	private int 	content_no;
@@ -17,10 +17,10 @@ public class ReviewDTO {
 	public void setReview_no(int review_no) {
 		this.review_no = review_no;
 	}
-	public int getRating() {
+	public double getRating() {
 		return rating;
 	}
-	public void setRating(int rating) {
+	public void setRating(double rating) {
 		this.rating = rating;
 	}
 	public String getReview_content() {
