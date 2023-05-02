@@ -14,10 +14,23 @@ public class ReviewServiceImpl implements ReviewService{
 	
 	/* 댓글등록 */
 	@Override
-	public void enrollReview(ReviewDTO dto) throws Exception {
-		reviewMapper.enrollReview(dto);
+	public int enrollReview(ReviewDTO dto) throws Exception {
+		
+		int result = reviewMapper.enrollReview(dto);
 		System.out.println("ReviewServiceImpl");
 		
+		return result;
+	}
+
+	@Override
+	public String checkReply(ReviewDTO dto) {
+		Integer result = reviewMapper.checkReview(dto);
+		
+		if(result == null) {
+			return "0";
+		} else {
+			return "1";
+		}
 	}
 
 }

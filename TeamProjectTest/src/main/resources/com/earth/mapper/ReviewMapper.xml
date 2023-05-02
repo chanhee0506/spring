@@ -9,4 +9,10 @@
   		insert into ottt_review(review_content,rating,memberId) values(#{review_content},#{rating},#{memberId})
   	</insert>
  	
+ 	<select id="checkReview" resultType="integer">
+ 		select review_no 
+		from ottt_review 
+		where memberId = #{memberId}
+ 	</select>
+ 	
   </mapper>

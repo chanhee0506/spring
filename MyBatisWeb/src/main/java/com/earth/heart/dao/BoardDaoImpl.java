@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.earth.heart.domain.BoardDTO;
+import com.earth.heart.domain.SearchItem;
 
 @Repository
 public class BoardDaoImpl implements BoardDao{
@@ -60,6 +61,30 @@ public class BoardDaoImpl implements BoardDao{
 	public int update(BoardDTO boardDTO) throws Exception {
 		// TODO Auto-generated method stub
 		return session.update(namespace + "update", boardDTO);
+	}
+
+	@Override
+	public List<BoardDTO> selectPage(Map map) throws Exception {
+		
+		return session.selectList(namespace + "selectPage", map);
+	}
+
+	@Override
+	public int increaseViewCnt(Integer bno) throws Exception {
+		// TODO Auto-generated method stub
+		return session.update(namespace + "increaseViewCnt", bno);
+	}
+
+	@Override
+	public int searchResultCnt(SearchItem sc) throws Exception {
+		// TODO Auto-generated method stub
+		return session.selectOne(namespace + "searchResultCnt", sc);
+	}
+
+	@Override
+	public List<BoardDTO> searchSelectPage(SearchItem sc) throws Exception {
+		// TODO Auto-generated method stub
+		return session.selectList(namespace + "searchSelectPage", sc);
 	}
 
 	
