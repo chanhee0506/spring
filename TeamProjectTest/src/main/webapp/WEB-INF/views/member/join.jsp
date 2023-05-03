@@ -166,11 +166,10 @@
           $(document).ready(function(){
         	  $(".join_button").click(function(){
             	//회원가입 버튼(회원가입 기능 작동)
-        if(idValue&&passwordValue&&passwordCheckValue&&passwordRegex&&nameValue&&nameRegex){
-
-        	
+        if(idValue&&passwordValue&&passwordCheckValue&&passwordRegex&&nameValue&&nameRegex){        	
         	$("#membership").attr("action", "/member/join");
     		$("#membership").submit();
+        	}       		        	
         }
         return false;
         

@@ -835,4 +835,10 @@ form label{
     right: 15px;
 }
 
+#result {
+    display: block;
+    border: 3px solid red;
+    position: absolute;
+    top: 10px;
+}
 

@@ -48,6 +48,22 @@ public class BoardController {
 						
 		return "boardList";			//로그인 한 상태, 게시물의 화면 목록으로 이동
 	}
+	
+	@GetMapping("/read")
+	public String read(Integer bno, SearchItem sc, Model m) {
+		
+		try {
+			BoardDTO boardDTO = boardService.read(bno);
+			//m.addAttribute("boardDTO", boardDTO);		//아래 코드와 동일함
+			m.addAttribute(boardDTO);
+			
+		} catch (Exception e) {	
+			e.printStackTrace();
+			return "redirect:/board/list";
+		}
+		
+		return"board";
+	}
 
 	private boolean loginCheck(HttpServletRequest request) {
 		// 1. 세션을 얻어서 (false는 session이 없어도 새로 생성하지 않음, 반환값은 null)

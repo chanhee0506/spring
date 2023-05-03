@@ -23,12 +23,54 @@
     		font-family: 'Noto Sans KR', sans-serif;
     	}
     	
+    	a{
+    		text-decoration: none;
+    		color: black;
+    	}
+    	
     	.board-container {
     		width: 60%;
     		height: 1200px;
     		margin: 0 auto;
     	}
     	
+    	table {
+    		border-collapse: collapse;
+    		width: 100%;
+    		border-top: 2px solid rgb(39,39,39);
+    	}
+    	
+    	tr:nth-child(even) {
+		background-color: #f0f0f070;
+		}
+		
+		th,td {
+			width: 300px;
+			text-align: center;
+			padding: 10px 12px;
+			border-bottom: 1px solid #ddd; 
+		}
+		
+		.paging-container {
+			width: 100%;
+			height: 70px;
+			display: flex;
+			margin-top: 50px;
+			margin: auto;
+		}
+		
+		.paging {
+			color: black;
+			width: 100%;
+			align-items: center;
+		}
+		
+		.page {
+			color: black;
+			padding: 6px;
+			margin-right: 10px;
+		}
+		
     </style>
 </head>
 <body>
@@ -53,8 +95,48 @@
     		</div>
     		
     		<table>
+    			<tr>
+    				<th class="no">번호</th>
+    				<th class="title">제목</th>
+    				<th class="writer">이름</th>
+    				<th class="regdate">등록일</th>
+    				<th class="viewcnt">조회수</th>
+    			</tr>
+    			
+    			<c:forEach var="boardDTO" items="${list}">
+    				<tr>
+    					<td class="no">${boardDTO.bno }</td>
+    					<td class="title">
+    						<a href="<c:url value="/board/read${pr.sc.queryString}&bno=${boardDTO.bno}" />">${boardDTO.title}</a>
+    					</td>
+    					<td class="writer">${boardDTO.writer}</td>
+    					<td class="regdate">
+    						<fmt:formatDate value="${boardDTO.reg_date}" pattern="yyyy-MM-dd" type="date"/>
+    					</td>
+    					<td class="viewcnt">${boardDTO.view_cnt}</td>
+    				</tr>
+    			</c:forEach>
+    		</table>
+    		<br>
     		
-    		</table>	
+    		<div class="paging-container">
+    			<div class="paging">
+    				<c:if test="${totalCnt == null || totalCnt == 0 }">
+    					<div>게시물이 없습니다.</div>
+    				</c:if>
+    				<c:if test="${totalCnt != null || totalCnt != 0 }">
+    					<c:if test="${pr.showPrev }">
+    						<a class="page" href="<c:url value="/board/list${pr.sc.getQueryString(pr.beginPage-1)}" />">&lt;</a>
+    					</c:if>
+    					<c:forEach var="i" begin="${pr.beginPage}" end="${pr.endPage}">
+    						<a class="page" href="<c:url value="/board/list${pr.sc.getQueryString(i)}" />">${i}</a>
+    					</c:forEach>
+    					<c:if test="${pr.showNext}">
+    						<a class="page" href="<c:url value="/board/list${pr.sc.getQueryString(pr.endPage+1)}" />">&gt;</a>
+    					</c:if>
+    				</c:if>
+    			</div>
+    		</div>	
     	</div>
     </div>
 </body>

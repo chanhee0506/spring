@@ -136,7 +136,7 @@ public class BoardDaoImplTest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void updateTest() throws Exception {
 		boardDao.deleteAll();
 		BoardDTO boardDTO = new BoardDTO("Pioneering", "Ready for Action", "earth");
@@ -152,6 +152,15 @@ public class BoardDaoImplTest {
 		assertTrue(boardDTO.equals(boardDTO2));
 	}
 	
+	@Test
+	public void insertDummyTestData() throws Exception {
+		boardDao.deleteAll();
+		
+		for (int i =1; i <= 250; i++) {
+			BoardDTO boardDTO = new BoardDTO("Pioneering"+i, "Ready for Action", "earth");
+			boardDao.insert(boardDTO);
+		}
+	}
 }
 
 

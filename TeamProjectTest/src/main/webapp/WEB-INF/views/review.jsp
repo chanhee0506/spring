@@ -121,7 +121,6 @@
         </ul>
       </div>
     </section>
-
     <section class="sec02">
       <div class="review">
         <div class="left-score">
@@ -170,7 +169,7 @@
    				</form>
                 <div class="review-bottom">
                   <div class="checkedblur"><input type="checkbox" id="checkbox-blur">스포일러 포함 여부</input></div>
-                <button type="submit" class="enroll_btn">
+                <button type="submit" class="enroll_btn" id="submit-review">
               	  <a>
                   리뷰 등록
                   </a>
@@ -186,31 +185,31 @@
               </button>
             
           </div>
-          <div id="review-result">
+		  <div id="review-result">
 
             
           </div> 
           <script>
-     	  $(".enroll_btn").on("click", function(e){
-			
+     	  $(".enroll_btn").on("click", function(e){			
      		 const memberId = '${member.memberId}';
      		 const rating = parseFloat($("input[name=rating]:checked").val());
-    		const review_content = $("textarea").val();
+    		 const review_content = $("textarea").val();
 
-    		const data = {
+    		 const data = {
     				memberId : memberId,
     				rating : rating, 
     				review_content : review_content
-    		}		
-    		
+    		}		  		
     		$.ajax({
     			data : data,
     			type : 'POST',
     			url : '/enroll',
-    			success : function(result){
-    				window.close();
-    			}
-    			
+    		    success : function(result){
+    		    	alert("리뷰가 정상적으로 등록되었습니다.");
+    		      }, 
+    		      error : function(jqXHR, textStatus, errorThrown){
+    		    	  alert("이미 리뷰를 등록 하셨습니다.");
+    		      }    			
     		});	
       	});    
           </script>
