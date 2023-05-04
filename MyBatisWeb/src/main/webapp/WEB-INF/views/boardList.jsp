@@ -74,7 +74,6 @@
     </style>
 </head>
 <body>
-    <!-- 헤더 인클루드  -->
     <%-- <%@include file="header.jsp" %> --%>
     
     <div id="menu">
