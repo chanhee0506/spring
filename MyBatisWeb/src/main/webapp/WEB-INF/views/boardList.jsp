@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <c:set var="loginId" value="${sessionScope.id }" />
-<c:set var="loginout" value="${sessionScope.id==null ? 'Login' : 'Logout' }" /> 
+<c:set var="loginout" value="${sessionScope.id==null ? 'Login' : 'id:'+=loginId}" /> 
 <c:set var="loginoutlink" value="${sessionScope.id==null ? '/login/login' : '/login/logout' }" /> 
     
 <!DOCTYPE html>
@@ -86,6 +86,12 @@
     		<li><a href=""><i class="fas fa-search small"></i></a></li>
     	</ul>
     </div>
+    
+    <script type="text/javascript">
+    	let msg = "${msg}"
+    	if(msg == "DEL_OK") alert("성공적으로 삭제 되었습니다.")
+    	if(msg == "DEL_ERR") alert("삭제되었거나 없는 게시물입니다.")
+    </script>
     
     <div style="text-align: center;">
     	<div class="board-container">

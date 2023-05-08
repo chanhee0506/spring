@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <c:set var="loginId" value="${sessionScope.id }" />
-<c:set var="loginout" value="${sessionScope.id==null ? 'Login' : 'Logout' }" /> 
+<c:set var="loginout" value="${sessionScope.id==null ? 'Login' : 'id:'+=loginId}" /> 
 <c:set var="loginoutlink" value="${sessionScope.id==null ? '/login/login' : '/login/logout' }" /> 
     
 <!DOCTYPE html>
@@ -27,6 +27,52 @@
     		width: 50%;
     		margin: auto;
     	}
+    	
+    	.writing-header {
+    		position: relative;
+    		margin: 20px 0 0 0;
+    		padding-bottom: 10px;
+    		border-bottom: 1px solid #323232;
+    	}
+    	
+    	.frm {
+    		width: 100%;
+    	}
+    	
+    	input {
+    		width: 100%;
+    		height: 35px;
+    		margin: 5px 0px 10px 0px;
+    		border: 1px solid #e9e8e8;
+    		padding: 8px;
+    		background: #f8f8f8;
+    		outline-color: #e6e6e6;
+    	}
+    	
+    	textarea {
+    		width: 100%;
+    		background: #f8f8f8;
+			margin: 5px 0px 10px 0px;
+			border: 1px solid #e9e8e8; 
+			resize: none;
+			padding: 8px;
+			outline-color: #e6e6e6; 		
+    	}
+    	
+    	.btn {
+    		background-color: rgb(236, 236, 236);
+    		border: none;
+    		color: black;
+    		padding: 6px 12px;
+    		font-size: 16px;
+    		cursor: pointer;
+    		border-radius: 5px;
+    	}
+    	
+    	.btn:hover {
+    		text-decoration: underline;
+    	}
+    	
     </style>
 </head>
 <body>
@@ -42,13 +88,27 @@
     </div>
 	
 	<script type="text/javascript">
-		$(document).ready(function() {
+		$(document).ready(function() {			/* main */
+			let bno = $("input[name=bno]").val()
+			
+			$('#listBtn').on("click", function(){
+				location.href = "<c:url value='/board/list${searchItem.queryString}' />"
+			})
+			
+			$("#removeBtn").on("click", function(){
+				if (!confirm("정말로 삭제하시겠습니까?")) return;
+				
+				let form = $("#form")
+				form.attr("action", "<c:url value='/board/remove${searchItem.queryString}' />")
+				form.attr("method", "post")
+				form.submit()
+			})
 			
 		})
 	</script>    
     
     <div class="container">
-    	<h2>게시판 ${mode=="new" ? "글쓰기" : "읽기"}</h2>
+    	<h2 class="writing-header">게시판 ${mode=="new" ? "글쓰기" : "읽기"}</h2>
     	<form action="" id="form" class="frm" method="post">
     		<input type="hidden" name="bno" value="${boardDTO.bno }" />
     		<input type="text" name="title" value="${boardDTO.title }" ${mode=="new" ? "" : "readonly='readonly'" }/> <br>

@@ -36,10 +36,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.ottt"/>
+			<item value="org."/>
 		</list>
 		<list key="groupId">
-			<item value="com.ottt"/>
+			<item value="com.earth"/>
 		</list>
 		<list key="artifactId">
 		</list>
@@ -57,12 +57,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.ottt"/>
+			<item value="com.earth"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="controller"/>
+			<item value="chanheeyou"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

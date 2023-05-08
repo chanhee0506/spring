@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.earth.heart.domain.BoardDTO;
 import com.earth.heart.domain.PageResolver;
@@ -64,7 +66,33 @@ public class BoardController {
 		
 		return"board";
 	}
-
+	
+	@PostMapping("/remove")
+	public String remove(Integer bno, Integer page, Integer pageSize,
+			RedirectAttributes rattr, HttpSession session) {
+		
+		String writer = (String) session.getAttribute("id");
+		String msg = "DEL_OK";
+		
+		try {
+			if(boardService.remove(bno, writer) != 1)
+				throw new Exception("Delete failed.");
+		} catch (Exception e) {
+			e.printStackTrace();
+			msg = "DEL_ERR";
+		}
+		
+		//삭제 후 메세지가 한번만 나와야 함.
+		//Model이 아닌 RedirectAttributes에 저장하면 메시지가 한번만 나옴.
+		rattr.addAttribute("page", page);
+		rattr.addAttribute("pageSize", pageSize);
+		rattr.addFlashAttribute("msg", msg);
+		
+		return "redirect:/board/list"; 
+	}
+	
+	
+	
 	private boolean loginCheck(HttpServletRequest request) {
 		// 1. 세션을 얻어서 (false는 session이 없어도 새로 생성하지 않음, 반환값은 null)
 		HttpSession session = request.getSession(false);

@@ -33,6 +33,7 @@
 <aop-project name="SimpleServletWeb"/>
 <aop-project name="RequestMessageWeb"/>
 <aop-project name="MyBatisWeb"/>
+<aop-project name="BoardListWeb"/>
 <aop-project name="OTTT"/>
 <aop-project name="LoginWeb"/>
 <aop-project name="TeamProjectTest"/>
