@@ -30,7 +30,7 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
-		<!-- 한글 변환 필터  -->
+								<!--  한글 변환 필터 -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -38,7 +38,7 @@
 			<param-name>encoding</param-name>
 			<param-value>UTF-8</param-value>
 		</init-param>
-				<init-param>
+			<init-param>
 			<param-name>forceEncoding</param-name>
 			<param-value>true</param-value>
 		</init-param>
@@ -46,6 +46,20 @@
 	
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+		<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+		
+	<filter>		
+		<filter-name>MultipartFilter</filter-name>
+		<filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MultipartFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
